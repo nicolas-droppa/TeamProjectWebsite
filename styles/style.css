@@ -23,6 +23,33 @@
     --color-ascent: #ffb217;
 }
 
+.dark-mode {
+    --color-white: #f3f3f3;
+
+    --color-background: #1b1a1c;
+    --color-background-complement: #1a191b;
+
+    --color-text: #fafafa;
+    --color-text-complement: #9a9a9a;
+    --color-text-unimportant: #494949;
+
+    --color-primary: #292938;
+    --color-secondary: #20202c;
+    --color-ascent: #ffb217;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     background-color: var(--color-background);
     font-family: 'Novelin-Reg', sans-serif;
@@ -40,9 +67,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 98%;
+    width: 100%;
+    padding: 2rem 2rem;
     margin: 0 auto;
-    padding: 1rem 2rem;
     background-color: var(--color-main);
     z-index: 10000;
     border-bottom: none;
@@ -78,6 +105,49 @@ body {
     color: var(--color-ascent);
 }
 
+.day-night-wrapper {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
+
+.day-night-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.day-night-popup {
+    position: absolute;
+    top: 2.5rem;
+    right: 0;
+    background-color: var(--color-background-complement);
+    border: 1px solid var(--color-text-complement);
+    border-radius: .15rem;
+    display: none;
+    flex-direction: column;
+    min-width: 6rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.day-night-popup .mode-option {
+    background: none;
+    border: none;
+    padding: .5rem 1rem;
+    text-align: left;
+    font-family: 'Novelin-Reg', sans-serif;
+    cursor: pointer;
+    color: inherit;
+}
+
+.day-night-popup .mode-option:hover {
+    font-family: 'Novelin-Bold', sans-serif;
+    color: var(--color-text-complement);
+}
+
 /*  ===============
         HERO
     =============== */
@@ -97,7 +167,7 @@ body {
 .hero-content h1 {
     font-family: 'Novelin-Bold', sans-serif;
     font-size: 3rem;
-    margin-bottom: -2rem;
+    margin-bottom: -0.25rem;
     letter-spacing: 1.65rem;
     text-shadow: 1px 0 currentColor, -1px 0 currentColor,
                 0 1px currentColor, 0 -1px currentColor;
@@ -106,7 +176,7 @@ body {
 .hero-content h2 {
     font-family: 'Novelin-Bold', sans-serif;
     font-size: 2.5rem;
-    margin-bottom: -5rem;
+    margin-bottom: -0.5rem;
     text-shadow: 1px 0 currentColor, -1px 0 currentColor,
                 0 1px currentColor, 0 -1px currentColor;
 }
@@ -114,7 +184,6 @@ body {
 .project-name {
     font-family: 'Novelin-Bold', sans-serif;
     font-size: 4.5rem;
-    margin-bottom: 2rem;
     letter-spacing: .4rem;
     text-shadow: 1px 0 currentColor, -1px 0 currentColor,
                 0 1px currentColor, 0 -1px currentColor;
