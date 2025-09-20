@@ -2,12 +2,12 @@ const dayNightButton = document.getElementById('dayNightButton');
 const dayNightPopup = document.getElementById('dayNightPopup');
 const modeOptions = document.querySelectorAll('.mode-option');
 
+let popupOpen = false;
+
 dayNightButton.addEventListener('click', () => {
-    const isVisible = dayNightPopup.style.display === 'flex';
-    dayNightPopup.style.display = isVisible ? 'none' : 'flex';
-    dayNightButton.innerHTML = isVisible 
-        ? '<i class="fa-solid fa-chevron-down"></i>' 
-        : '<i class="fa-solid fa-chevron-up"></i>';
+    popupOpen = !popupOpen;
+    dayNightPopup.classList.toggle('show', popupOpen);
+    dayNightButton.style.transform = popupOpen ? 'rotate(180deg)' : 'rotate(0deg)';
 });
 
 modeOptions.forEach(btn => {
@@ -21,8 +21,9 @@ modeOptions.forEach(btn => {
             localStorage.setItem('dark-mode', 'enabled');
         }
 
-        dayNightPopup.style.display = 'none';
-        dayNightButton.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+        popupOpen = false;
+        dayNightPopup.classList.remove('show');
+        dayNightButton.style.transform = 'rotate(0deg)';
     });
 });
 
