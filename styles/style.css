@@ -27,48 +27,99 @@ body {
     background-color: var(--color-background);
     font-family: 'Novelin-Reg', sans-serif;
     color: var(--color-text);
+    height: 100%;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
+.hero {
+    min-height: 98vh;
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 98%;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    background-color: var(--color-main);
-    z-index: 10000;
-    border-bottom: none;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.navbar .nav-links a {
+    justify-content: flex-end;
+    gap: 6rem;
+    flex-direction: column;
+    padding-left: 2rem;
+    padding-right: 2rem;
     color: var(--color-text);
+}
+
+.hero-content h1 {
+    font-family: 'Novelin-Bold', sans-serif;
+    font-size: 3rem;
+    margin-bottom: -2rem;
+    letter-spacing: 1.65rem;
+    text-shadow: 1px 0 currentColor, -1px 0 currentColor,
+                0 1px currentColor, 0 -1px currentColor;
+}
+
+.hero-content h2 {
+    font-family: 'Novelin-Bold', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: -5rem;
+    text-shadow: 1px 0 currentColor, -1px 0 currentColor,
+                0 1px currentColor, 0 -1px currentColor;
+}
+
+.project-name {
+    font-family: 'Novelin-Bold', sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: .4rem;
+    text-shadow: 1px 0 currentColor, -1px 0 currentColor,
+                0 1px currentColor, 0 -1px currentColor;
+    color: var(--color-ascent);
+}
+
+.btn-primary {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    padding: 0;
+    cursor: pointer;
     text-decoration: none;
-    font-size: .75rem;
-    text-transform: uppercase;
     font-weight: normal;
 }
 
-.navbar .nav-links a:hover {
-    font-weight: bold;
-}
-
-.navbar .logo {
+.btn-primary:hover {
     font-family: 'Novelin-Bold', sans-serif;
-    position: absolute;
-    left: 2rem;
-    top: 2rem;
-    letter-spacing: .2rem;
+    color: var(--color-text-complement);
 }
 
-.navbar .logo span {
-    color: var(--color-ascent);
+.team-section {
+    margin-top: 1rem;
+    border-top: .2rem solid var(--color-text-complement);
+    border-bottom: .2rem solid var(--color-text-complement);
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.aditional-info {
+    bottom: 1rem;
+}
+
+.aditional-info .title {
+    font-family: 'Novelin-Bold', sans-serif;
+}
+
+.aditional-info .content {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.aditional-info .content li {
+    color: var(--color-text-complement);
+    margin: .25rem 0;
+    font-size: 1rem;
+}
+
+.team-section .authors {
+    padding-right: 6rem;
+    border-right: .2rem solid var(--color-text-complement);
+}
+
+.team-section .instructors {
+    padding-left: 6rem;
 }
