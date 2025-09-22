@@ -6,6 +6,7 @@
     <title>Názov tímového projektu</title>
     <link rel="icon" type="image/png" href="assets/icons/favicon.ico">
     <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/meetings.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
@@ -35,27 +36,14 @@
         </div>
     </nav>
 
-    <section id="meetings">
-        <h2>Meetings</h2>
-        <table id="meetingsTable">
-            <thead>
-                <tr>
-                    <th>Téma</th>
-                    <th>Dátum</th>
-                    <th>Popis</th>
-                    <th>Veduci</th>
-                    <th>Jakub D</th>
-                    <th>Samuel D</th>
-                    <th>Nicolas D</th>
-                    <th>Vratko B</th>
-                    <th>Miroslava Š</th>
-                    <th>Prejednavane veci</th>
-                    <th>Záver</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </section>
+    <div id="meetingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <section id="meetings" class="meetings"></section>
 
     <script src="scripts/loaders/navbarLoader.js"></script>
     <script src="scripts/loaders/meetingsDataLoader.js"></script>
