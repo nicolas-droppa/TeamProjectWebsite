@@ -335,3 +335,117 @@ body {
 .circle:hover::after {
     opacity: 1;
 }
+
+/* ==================
+    RESPONSIVE DESIGN
+   ================== */
+@media (max-width: 1024px) {
+    .meetings {
+        padding: 3rem;
+        gap: 1rem;
+    }
+
+    .meeting-card {
+        max-width: 18rem;
+        padding: 0.8rem;
+    }
+
+    .meeting-card .title .number {
+        font-size: 1.8rem;
+        padding-right: 1rem;
+    }
+
+    .meeting-card .title .text {
+        font-size: 1.1rem;
+        padding-left: 1rem;
+    }
+
+    .modal-content {
+        max-width: 32rem;
+        margin: 5% 2%;
+        padding: 1.5rem;
+        max-height: 75vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .meetings {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+
+    .meeting-card {
+        max-width: 100%;
+        padding: 0.8rem;
+    }
+
+    .meeting-card .title .number {
+        font-size: 1.5rem;
+        padding-right: 0.8rem;
+    }
+
+    .meeting-card .title .text {
+        font-size: 1rem;
+        padding-left: 0.8rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-width: 28rem;
+        margin: 5% auto;
+        padding: 1.2rem;
+        max-height: 80vh;
+    }
+
+    .modal-body-scroll {
+        max-height: 70vh;
+    }
+
+    .close-button {
+        top: 1rem;
+        right: 1rem;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .meetings {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+
+    .meeting-card {
+        padding: 0.6rem;
+    }
+
+    .meeting-card .title .number {
+        font-size: 1.3rem;
+        padding-right: 0.5rem;
+    }
+
+    .meeting-card .title .text {
+        font-size: 0.95rem;
+        padding-left: 0.5rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+        max-height: 75vh;
+        gap: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .modal-body-scroll {
+        max-height: 65vh;
+        padding-right: 0.3rem;
+    }
+
+    .close-button {
+        top: 0.8rem;
+        right: 1rem;
+        font-size: 2rem;
+    }
+}
