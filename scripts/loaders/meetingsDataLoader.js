@@ -10,11 +10,11 @@ fetch(csvUrl)
             // attendance mapping
             const attendance = [
                 { key: 'Veduci', class: 'blue-circle', name: 'Veduci' },
-                { key: 'JakubD', class: 'red-circle', name: 'Jakub D' },
-                { key: 'SamuelD', class: 'green-circle', name: 'Samuel D' },
-                { key: 'NicolasD', class: 'orange-circle', name: 'Nicolas D' },
-                { key: 'VratkoB', class: 'yellow-circle', name: 'Vratko B' },
-                { key: 'MiroslavaS', class: 'pink-circle', name: 'Miroslava Š' }
+                { key: 'JakubD', class: 'red-circle', name: 'Jakub Daniš' },
+                { key: 'SamuelD', class: 'green-circle', name: 'Samuel Dutka' },
+                { key: 'NicolasD', class: 'orange-circle', name: 'Nicolas Droppa' },
+                { key: 'VratkoB', class: 'yellow-circle', name: 'Vratko Bakša' },
+                { key: 'MiroslavaS', class: 'pink-circle', name: 'Miroslava Štefinová' }
             ];
 
             const circles = attendance.map(person => {
@@ -60,15 +60,36 @@ function showMeetingModal(row, number) {
     const closeBtn = document.getElementById('closeModal');
 
     modalBody.innerHTML = `
-        <h3>Stretnutie ${number}: ${row.HlavnaTema}</h3>
-        <p><strong>Dátum:</strong> ${row.Datum}</p>
-        <p><strong>Čas:</strong> ${row.Cas}</p>
-        <p><strong>Popis:</strong> ${row.KratkyPopis}</p>
-        <p><strong>Prejednávané veci:</strong> ${row.PrejednavaneVeci}</p>
-        <p><strong>Záver:</strong> ${row.Zaver}</p>
+        <div class="modal-body-scroll">
+            <div class="modal-title">
+                <div class="number">${number}</div>
+                <div class="text">${row.HlavnaTema}</div>
+            </div>
+
+            <p><strong>Dátum:</strong> ${row.Datum}</p>
+            <p><strong>Čas:</strong> ${row.Cas}</p>
+            <div class="section-divider"></div>
+
+            <p><strong>Popis:</strong></p>
+            <p>${row.KratkyPopis}</p>
+            <div class="section-divider"></div>
+
+            <p><strong>Prejednávané veci:</strong></p>
+            <p>${row.PrejednavaneVeci}</p>
+            <div class="section-divider"></div>
+
+            <p><strong>Záver:</strong></p>
+            <p>${row.Zaver}</p>
+            <div class="section-divider"></div>
+
+            <p><strong>Prítomní:</strong></p>
+            <div class="attendance-modal">
+                ${generateAttendanceCircles(row)}
+            </div>
+        </div>
     `;
 
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
 
     closeBtn.onclick = () => {
         modal.style.display = 'none';
@@ -81,3 +102,20 @@ function showMeetingModal(row, number) {
     };
 }
 
+function generateAttendanceCircles(row) {
+    const attendance = [
+        { key: 'Veduci', class: 'blue-circle', name: 'Veduci' },
+        { key: 'JakubD', class: 'red-circle', name: 'Jakub D' },
+        { key: 'SamuelD', class: 'green-circle', name: 'Samuel D' },
+        { key: 'NicolasD', class: 'orange-circle', name: 'Nicolas D' },
+        { key: 'VratkoB', class: 'yellow-circle', name: 'Vratko B' },
+        { key: 'MiroslavaS', class: 'pink-circle', name: 'Miroslava Š' }
+    ];
+
+    return attendance.map(person => {
+        if (row[person.key] === 'TRUE') {
+            return `<div class="person" title="${person.name}" style="margin-right:0.5rem;">${person.name}</div>`;
+        }
+        return '';
+    }).join('');
+}
