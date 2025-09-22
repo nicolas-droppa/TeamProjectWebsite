@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="assets/icons/favicon.ico">
     <link rel="stylesheet" href="styles/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -34,40 +35,29 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>WE ARE BUILDING</h1>
-            <!-- <h2>THE FUTURE OF SERVICE ORDERING</h2> -->
-            <h2>THEME NAME IN ENGLISH</h2>
-            <p class="project-name">PROJECT BEX<span>O</span>RA</p>
-        </div>
-
-        <div class="aditional-info">
-            <a href="#documentation" class="btn-primary"># DOCUMENTATION</a>
-            <div class="team-section">
-                <div class="authors">
-                    <div class="title">TEAM</div>
-                    <ul class="content">
-                        <li>Bc. Jakub Daniš</li>
-                        <li>Bc. Samuel Dutka</li>
-                        <li>Bc. Nicolas Droppa</li>
-                        <li>Bc. Vratko Bakša</li>
-                        <li>Bc. Miroslava Štefinová</li>
-                    </ul>
-                </div>
-
-                <div class="instructors">
-                    <div class="title">INSTRUCTOR</div>
-                    <ul class="content">
-                        <!-- <li>Ing. Marek Drnzik</li> -->
-                        <li>Name Surname</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <section id="meetings">
+        <h2>Meetings</h2>
+        <table id="meetingsTable">
+            <thead>
+                <tr>
+                    <th>Téma</th>
+                    <th>Dátum</th>
+                    <th>Popis</th>
+                    <th>Veduci</th>
+                    <th>Jakub D</th>
+                    <th>Samuel D</th>
+                    <th>Nicolas D</th>
+                    <th>Vratko B</th>
+                    <th>Miroslava Š</th>
+                    <th>Prejednavane veci</th>
+                    <th>Záver</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </section>
 
-    <script src="scripts/landingPage.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/meetings.js"></script>
 </body>
 </html>
