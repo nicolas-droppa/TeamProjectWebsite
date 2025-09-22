@@ -1,3 +1,22 @@
+
+
+const burgerButton = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+
+burgerButton.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+});
+
+let burgerOpen = false;
+
+burgerButton.addEventListener('click', () => {
+    burgerOpen = !burgerOpen;
+    navLinks.classList.toggle('show', burgerOpen);
+    burgerButton.innerHTML = burgerOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+});
+
 const dayNightButton = document.getElementById('dayNightButton');
 const dayNightPopup = document.getElementById('dayNightPopup');
 const modeOptions = document.querySelectorAll('.mode-option');

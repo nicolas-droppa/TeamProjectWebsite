@@ -70,8 +70,8 @@ body {
     width: 100%;
     padding: 2rem 2rem;
     margin: 0 auto;
-    background-color: var(--color-main);
-    z-index: 10000;
+    background-color: var(--color-background);
+    z-index: 1000;
     border-bottom: none;
 }
 
@@ -122,8 +122,8 @@ body {
 
 .day-night-popup {
     position: absolute;
-    top: 2.5rem;
-    right: 0;
+    top: 3.75rem;
+    right: 1rem;
     background-color: var(--color-background-complement);
     border: 1px solid var(--color-text-complement);
     border-radius: .3rem;
@@ -158,6 +158,16 @@ body {
 .day-night-popup .mode-option:hover {
     font-family: 'Novelin-Bold', sans-serif;
     color: var(--color-text-complement);
+}
+
+.burger {
+    display: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
+    transition: transform 0.3s ease;
 }
 
 /*  ===============
@@ -255,4 +265,152 @@ body {
 
 .team-section .instructors {
     padding-left: 6rem;
+}
+
+/* ==================
+    RESPONSIVE DESIGN
+   ================== */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+        letter-spacing: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .project-name {
+        font-size: 3.5rem;
+        letter-spacing: .2rem;
+    }
+
+    .team-section {
+        gap: 2rem;
+    }
+
+    .team-section .authors,
+    .team-section .instructors {
+        padding: 0;
+        border: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2rem;
+        padding: 2.25rem 2rem;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        left: 2rem;
+        letter-spacing: .1rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar .nav-links {
+        position: absolute;
+        top: 3.75rem;
+        right: 1rem;
+        background-color: var(--color-background-complement);
+        flex-direction: column;
+        min-width: 11.25rem;
+        padding: 1rem;
+        border: .0625rem solid var(--color-text-complement);
+        border-radius: .3rem;
+        box-shadow: 0 .2rem .5rem rgba(0,0,0,0.2);
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: all 0.25s ease;
+        z-index: 1000;
+    }
+
+    .navbar .nav-links.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .nav-links li {
+        margin: .5rem 0;
+    }
+
+    .nav-links li a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .nav-links li a:hover {
+        color: var(--color-text-complement);
+    }
+
+    .burger {
+        display: block;
+        font-size: 1rem;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .day-night-wrapper {
+        position: static;
+    }
+
+    .hero {
+        padding: 1rem;
+        gap: 3rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        letter-spacing: .5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-name {
+        font-size: 2.5rem;
+        letter-spacing: .1rem;
+    }
+
+    .team-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .aditional-info {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+        letter-spacing: .25rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .project-name {
+        font-size: 2rem;
+    }
+
+    .day-night-button {
+        font-size: 1rem;
+    }
+
+    .day-night-popup {
+        min-width: 5rem;
+    }
 }
