@@ -119,6 +119,7 @@ body {
 .meeting-card .description {
     margin: 1rem 0;
     font-size: .9rem;
+    color: var(--color-text-complement);
     display: block;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -166,6 +167,13 @@ body {
 .orange-circle {background-color: var(--color-orange);}
 .pink-circle {background-color: var(--color-pink);}
 .green-circle{background-color: var(--color-green);}
+
+.blue-circle.absent  { background-color: transparent; border: 2px dashed var(--color-blue);  box-shadow: none; }
+.red-circle.absent   { background-color: transparent; border: 2px dashed var(--color-red);   box-shadow: none; }
+.yellow-circle.absent{ background-color: transparent; border: 2px dashed var(--color-yellow);box-shadow: none; }
+.orange-circle.absent{ background-color: transparent; border: 2px dashed var(--color-orange);box-shadow: none; }
+.pink-circle.absent  { background-color: transparent; border: 2px dashed var(--color-pink);  box-shadow: none; }
+.green-circle.absent { background-color: transparent; border: 2px dashed var(--color-green); box-shadow: none; }
 
 .modal {
     display: none;

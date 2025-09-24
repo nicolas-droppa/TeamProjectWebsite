@@ -7,7 +7,6 @@ fetch(csvUrl)
         const container = document.querySelector('#meetings');
 
         data.forEach((row, index) => {
-            // attendance mapping
             const attendance = [
                 { key: 'Veduci', class: 'blue-circle', name: 'Veduci' },
                 { key: 'JakubD', class: 'red-circle', name: 'Jakub Daniš' },
@@ -20,11 +19,12 @@ fetch(csvUrl)
             const circles = attendance.map(person => {
                 if (row[person.key] === 'TRUE') {
                     return `<div class="${person.class}" title="${person.name}"></div>`;
+                } else {
+                    return `<div class="${person.class} absent" title="${person.name}"></div>`;
                 }
-                return '';
             }).join('');
 
-            // card element
+
             const card = document.createElement('div');
             card.classList.add('meeting-card');
             card.innerHTML = `
@@ -104,7 +104,7 @@ function showMeetingModal(row, number) {
 
 function generateAttendanceCircles(row) {
     const attendance = [
-        { key: 'Veduci', class: 'blue-circle', name: 'Veduci' },
+        { key: 'Veduci', class: 'blue-circlea', name: 'Veduci' },
         { key: 'JakubD', class: 'red-circle', name: 'Jakub D' },
         { key: 'SamuelD', class: 'green-circle', name: 'Samuel D' },
         { key: 'NicolasD', class: 'orange-circle', name: 'Nicolas D' },
