@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Novelin-Reg';
+    src: url('../assets/fonts/Novelin-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Novelin-Bold';
+    src: url('../assets/fonts/Novelin-Bold.otf') format('opentype');
+}
+
+:root {
+    --color-white: #f3f3f3;
+
+    --color-background: #f8f7f7;
+    --color-background-complement: #f1f1f1;
+
+    --color-text: #151515;
+    --color-text-complement: #3b3b3b;
+    --color-text-unimportant: #696969;
+
+    --color-primary: #e5e5eb;
+    --color-secondary: #cdcddb;
+    --color-ascent: #ffb217;
+
+    --color-red: #ff4a4a;
+    --color-green: #68ff5d;
+    --color-blue: #54a1ff;
+    --color-orange: #ff9853;
+    --color-yellow: #ffe561;
+    --color-pink: #ff61e7;
+
+}
+
+.dark-mode {
+    --color-white: #f3f3f3;
+
+    --color-background: #1b1a1c;
+    --color-background-complement: #1e1d1f;
+
+    --color-text: #fafafa;
+    --color-text-complement: #9a9a9a;
+    --color-text-unimportant: #494949;
+
+    --color-primary: #292938;
+    --color-secondary: #20202c;
+    --color-ascent: #ffb217;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: 'Novelin-Reg', sans-serif;
+    color: var(--color-text);
+    height: 100%;
+}
+
+.content-sections {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.content-sections h4 {
+    font-family: 'Novelin-Bold', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-text);
+}
+
+.content-sections p {
+    font-size: 0.9rem;
+    color: var(--color-text-complement);
+}
+
+.images {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.images .card-image {
+    max-width: 100px;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}

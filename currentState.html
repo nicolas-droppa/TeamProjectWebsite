@@ -6,7 +6,7 @@
     <title>Názov tímového projektu</title>
     <link rel="icon" type="image/png" href="assets/icons/favicon.ico">
     <link rel="stylesheet" href="styles/style.css"/>
-    <link rel="stylesheet" href="styles/meetings.css"/>
+    <link rel="stylesheet" href="styles/currentState.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
@@ -20,8 +20,8 @@
 
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html">Home</a></li>
-            <li><a href="currentState.html">Current state</a></li>
-            <li><a href="#">Meetings</a></li>
+            <li><a href="#">Current state</a></li>
+            <li><a href="meetings.html">Meetings</a></li>
             <li><a href="#">Documentation</a></li>
         </ul>
         
@@ -36,17 +36,10 @@
         </div>
     </nav>
 
-    <div id="meetingModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" id="closeModal">&times;</span>
-            <div id="modalBody"></div>
-        </div>
-    </div>
-
     <section id="meetings" class="meetings"></section>
 
     <script src="scripts/loaders/navbarLoader.js"></script>
-    <script src="scripts/loaders/meetingsDataLoader.js"></script>
+    <script src="scripts/loaders/currentStateDataLoader.js"></script>
     <script src="scripts/utils/burgerMenu.js"></script>
     <script src="scripts/utils/darkTheme.js"></script>
     <script src="scripts/script.js"></script>
