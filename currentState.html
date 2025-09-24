@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 </head>
 <body>
+    <aside id="sidebar" class="sidebar"></aside>
+
     <nav class="navbar">
         <div class="logo">BEX<span>O</span>RA</div>
 
@@ -36,7 +38,14 @@
         </div>
     </nav>
 
-    <section id="meetings" class="meetings"></section>
+    <div class="container">
+        <aside class="sidebar" id="versionSidebar">
+            <h3>Versions</h3>
+            <ul id="versionList"></ul>
+        </aside>
+
+        <main id="updates" class="updates"></main>
+    </div>
 
     <script src="scripts/loaders/navbarLoader.js"></script>
     <script src="scripts/loaders/currentStateDataLoader.js"></script>

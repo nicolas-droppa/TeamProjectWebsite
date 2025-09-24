@@ -3,43 +3,59 @@ const csvUrl = './currentState.csv';
 fetch(csvUrl)
     .then(response => response.text())
     .then(csvText => {
-        const data = Papa.parse(csvText, { header: true }).data;
-        const container = document.querySelector('#meetings');
+        let data = Papa.parse(csvText, { header: true }).data;
 
-        data.forEach((row, index) => {
-        const nazvy = row.Nazvy ? row.Nazvy.split('|') : [];
-        const texty = row.Texty ? row.Texty.split('|') : [];
-        const obrazky = row.Obrazky ? row.Obrazky.split('|') : [];
+        data = data.filter(row => row && Object.values(row).some(val => val !== undefined && val !== null && val !== ''));
 
-        let obsahHtml = nazvy.map((nazov, i) => `
-            <div class="section">
-            <h4>${nazov}</h4>
-            <p>${texty[i] || ''}</p>
-            </div>
-        `).join('');
+        const container = document.querySelector('#updates');
+        const versionList = document.querySelector('#versionList');
 
-        let obrazkyHtml = obrazky.map(src => `
-            <img src="${src.trim()}" alt="Obrázok" class="card-image"/>
-        `).join('');
+        data.reverse().forEach((row, index) => {
+            const titles = row.Nazvy ? String(row.Nazvy).split('|') : [];
+            const texts = row.Texty ? String(row.Texty).split('|') : [];
+            const images = row.Obrazky ? String(row.Obrazky).split('|') : [];
 
-        const card = document.createElement('div');
-        card.classList.add('meeting-card');
-        card.innerHTML = `
-            <div class="meeting-card-body">
-            <div class="title">
-                <div class="number">${index + 1}</div>
-                <div class="text">${row.HlavnaTema}</div>
-            </div>
-            <div class="description">
-                <strong>Dátum:</strong> ${row.Datum}<br/>
-                <strong>Verzia:</strong> ${row.Verzia}
-            </div>
-            <div class="content-sections">${obsahHtml}</div>
-            <div class="images">${obrazkyHtml}</div>
-            </div>
-        `;
+            let sectionsHtml = titles.map((title, i) => `
+                <div class="section">
+                    <h4>${title || ''}</h4>
+                    <p>${texts[i] || ''}</p>
+                </div>
+            `).join('');
 
-        container.appendChild(card);
+            let imagesHtml = images.map(src => `
+                <img src="${src.trim() || ''}" alt="Image" class="card-image"/>
+            `).join('');
+
+            const titleHtml = `
+                <div class="version">${row.Verzia || ''}</div>
+                <div class="text">
+                    ${row.HlavnaTema || ''} <div class="label">${index === 0 ? '[ latest ]' : ''}</div>
+                </div>
+                <div class="date">${row.Datum || ''}</div>
+            `;
+
+            const updateSection = document.createElement('div');
+            updateSection.classList.add('updateSection');
+            updateSection.id = `update-${index}`;
+
+            updateSection.innerHTML = `
+                <div class="update-body">
+                    <div class="title">
+                        ${titleHtml}
+                    </div>
+                    <div class="content-sections">${sectionsHtml}</div>
+                    <div class="images">${imagesHtml}</div>
+                </div>
+            `;
+
+            container.appendChild(updateSection);
+
+            const li = document.createElement('li');
+            li.textContent = row.Verzia || `Update ${index+1}`;
+            li.addEventListener('click', () => {
+                document.getElementById(`update-${index}`).scrollIntoView({ behavior: 'smooth' });
+            });
+            versionList.appendChild(li);
         });
     })
     .catch(err => console.error('Error loading CSV:', err));
