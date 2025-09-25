@@ -1,4 +1,2 @@
 HlavnaTema,Datum,Verzia,Nazvy,Texty,Obrazky,New,Improvement,Bugfix
-"Rozdelenie úloh","2025-09-21","v1.0.0.","Úvod|Záver","Diskusia o rozdelení modulov|Všetko odsúhlasené","img1.png|img2.png",True,False,True
-"Kontrola pokroku","2025-09-28","v1.0.1.","Správa|Feedback","Skontrolovali sme progress|Dostali sme pripomienky","progress.png",False,True,False
-"Plán ďalších krokov","2025-10-05","v1.1.0.","Plán|Deadline|Úlohy","Naplánovali sme ďalší sprint|Stanovili sme deadline|Rozdelili sme úlohy","plan.png|tasks.png|deadline.png",True,True,False
+"Vytvorenie webstránky","23.09.2025","v1.0.0.","Vytvorenie tejto webstrańky|Vytvorenie repozitára pre projket","Bola vytvorená webstránka pre prezentáciu násho tímového projektu. Na webstránke možno vidieť navigačné menu kde sa dá preklikávať medzi prehľadom stretnutí a aktuálneho stavu projektu. V aktuálnom stave je možné filtrovať jednotlivé verzie. Ďalej bude pridaný link na prekliknutie k oficiálnej dokumentácii projektu.|Začali sme sa dohadovať aké technológie budú využité pri práci na projekte. Zároveň sme vytvorili prvotný commit pre projekt.","img1.png|img2.png",True,False,False

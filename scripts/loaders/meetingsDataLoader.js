@@ -8,7 +8,7 @@ fetch(csvUrl)
 
         data.forEach((row, index) => {
             const attendance = [
-                { key: 'Veduci', class: 'blue-circle', name: 'Veduci' },
+                { key: 'Veduci', class: 'blue-circle', name: '[Veduci] Marek Drnzik' },
                 { key: 'JakubD', class: 'red-circle', name: 'Jakub Daniš' },
                 { key: 'SamuelD', class: 'green-circle', name: 'Samuel Dutka' },
                 { key: 'NicolasD', class: 'orange-circle', name: 'Nicolas Droppa' },
@@ -104,7 +104,7 @@ function showMeetingModal(row, number) {
 
 function generateAttendanceCircles(row) {
     const attendance = [
-        { key: 'Veduci', class: 'blue-circlea', name: 'Veduci' },
+        { key: 'Veduci', class: 'blue-circlea', name: '[Veduci] Marek Drnzik' },
         { key: 'JakubD', class: 'red-circle', name: 'Jakub D' },
         { key: 'SamuelD', class: 'green-circle', name: 'Samuel D' },
         { key: 'NicolasD', class: 'orange-circle', name: 'Nicolas D' },
