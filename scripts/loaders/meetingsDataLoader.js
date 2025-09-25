@@ -1,30 +1,28 @@
-const csvUrl = './meetings.csv';
+const jsonUrl = './data/meetings.json';
 
-fetch(csvUrl)
-    .then(response => response.text())
-    .then(csvText => {
-        const data = Papa.parse(csvText, { header: true }).data;
+fetch(jsonUrl)
+    .then(response => response.json())
+    .then(data => {
         const container = document.querySelector('#meetings');
-
         data.forEach((row, index) => {
             const attendance = [
-                { key: 'Veduci', class: 'blue-circle', name: '[Veduci] Marek Drnzik' },
-                { key: 'JakubD', class: 'red-circle', name: 'Jakub Daniš' },
-                { key: 'SamuelD', class: 'green-circle', name: 'Samuel Dutka' },
-                { key: 'NicolasD', class: 'orange-circle', name: 'Nicolas Droppa' },
-                { key: 'VratkoB', class: 'yellow-circle', name: 'Vratko Bakša' },
-                { key: 'MiroslavaS', class: 'pink-circle', name: 'Miroslava Štefinová' }
+                { key: 'veduci', class: 'blue-circle', name: '[Veduci] Marek Drnzik' },
+                { key: 'jakubd', class: 'red-circle', name: 'Jakub Daniš' },
+                { key: 'samueld', class: 'green-circle', name: 'Samuel Dutka' },
+                { key: 'nicolasd', class: 'orange-circle', name: 'Nicolas Droppa' },
+                { key: 'vratkob', class: 'yellow-circle', name: 'Vratko Bakša' },
+                { key: 'miroslavas', class: 'pink-circle', name: 'Miroslava Štefinová' }
             ];
 
             const circles = attendance.map(person => {
-                if (row[person.key] === 'TRUE') {
+                if (row[person.key] === true) {
                     return `<div class="${person.class}" title="${person.name}"></div>`;
                 } else {
                     return `<div class="${person.class} absent" title="${person.name}"></div>`;
                 }
             }).join('');
 
-            const meetingTypeHtml = row['In-Person'].toLowerCase() === 'true' ? 'In-Person' : 'Online';
+            const meetingTypeHtml = row['inperson'] === true ? 'In-Person' : 'Online';
 
             const card = document.createElement('div');
             card.classList.add('meeting-card');
@@ -32,13 +30,13 @@ fetch(csvUrl)
                 <div class="meetingcard-body">
                     <div class="title">
                         <div class="number">${index + 1}</div>
-                        <div class="text">${row.HlavnaTema}</div>
+                        <div class="text">${row.hlavnatema}</div>
                     </div>
-                    <div class="description">${row.KratkyPopis}</div>
+                    <div class="description">${row.kratkypopis}</div>
                     <div class="footer">
                         <div class="time-date">
-                            <div class="time">${row.Cas}</div>
-                            <div class="date">${row.Datum}</div>
+                            <div class="time">${row.cas}</div>
+                            <div class="date">${row.datum}</div>
                         </div>
                         <div class="attendance">${circles}</div>
                         <div class="meeting-type">${meetingTypeHtml}</div>
@@ -51,10 +49,9 @@ fetch(csvUrl)
             });
 
             container.appendChild(card);
-
         });
     })
-    .catch(err => console.error('Error loading CSV:', err));
+    .catch(err => console.error('Error loading JSON:', err));
 
 function showMeetingModal(row, number) {
     const modal = document.getElementById('meetingModal');
@@ -65,23 +62,23 @@ function showMeetingModal(row, number) {
         <div class="modal-body-scroll">
             <div class="modal-title">
                 <div class="number">${number}</div>
-                <div class="text">${row.HlavnaTema}</div>
+                <div class="text">${row.hlavnatema}</div>
             </div>
 
-            <p><strong>Dátum:</strong> ${row.Datum}</p>
-            <p><strong>Čas:</strong> ${row.Cas}</p>
+            <p><strong>Dátum:</strong> ${row.datum}</p>
+            <p><strong>Čas:</strong> ${row.cas}</p>
             <div class="section-divider"></div>
 
             <p><strong>Popis:</strong></p>
-            <p>${row.KratkyPopis}</p>
+            <p>${row.kratkypopis}</p>
             <div class="section-divider"></div>
 
             <p><strong>Prejednávané veci:</strong></p>
-            <p>${row.PrejednavaneVeci}</p>
+            <p>${row.prejednavaneveci}</p>
             <div class="section-divider"></div>
 
             <p><strong>Záver:</strong></p>
-            <p>${row.Zaver}</p>
+            <p>${row.zaver}</p>
             <div class="section-divider"></div>
 
             <p><strong>Prítomní:</strong></p>
@@ -106,16 +103,16 @@ function showMeetingModal(row, number) {
 
 function generateAttendanceCircles(row) {
     const attendance = [
-        { key: 'Veduci', class: 'blue-circlea', name: '[Veduci] Marek Drnzik' },
-        { key: 'JakubD', class: 'red-circle', name: 'Jakub Daniš' },
-        { key: 'SamuelD', class: 'green-circle', name: 'Samuel Dutka' },
-        { key: 'NicolasD', class: 'orange-circle', name: 'Nicolas Droppa' },
-        { key: 'VratkoB', class: 'yellow-circle', name: 'Vratko Bakša' },
-        { key: 'MiroslavaS', class: 'pink-circle', name: 'Miroslava Štefinová' }
+        { key: 'veduci', class: 'blue-circlea', name: '[Veduci] Marek Drnzik' },
+        { key: 'jakubd', class: 'red-circle', name: 'Jakub Daniš' },
+        { key: 'samueld', class: 'green-circle', name: 'Samuel Dutka' },
+        { key: 'nicolasd', class: 'orange-circle', name: 'Nicolas Droppa' },
+        { key: 'vratkob', class: 'yellow-circle', name: 'Vratko Bakša' },
+        { key: 'miroslavas', class: 'pink-circle', name: 'Miroslava Štefinová' }
     ];
 
     return attendance.map(person => {
-        if (row[person.key] === 'TRUE') {
+        if (row[person.key] === true) {
             return `<div class="person" title="${person.name}" style="margin-right:0.5rem;">${person.name}</div>`;
         }
         return '';

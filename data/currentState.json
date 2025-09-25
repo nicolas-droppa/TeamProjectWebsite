@@ -1,0 +1,17 @@
+[
+    {
+        "hlavnatema": "Vytvorenie webstránky",
+        "datum": "23.09.2025",
+        "verzia": "v1.0.0.",
+        "sections": [
+            {
+                "nadpis": "Vytvorenie tejto webstránky",
+                "text": "Bola vytvorená webstránka pre prezentáciu násho tímového projektu. Na webstránke možno vidieť navigačné menu kde sa dá preklikávať medzi prehľadom stretnutí a aktuálneho stavu projektu. V aktuálnom stave je možné filtrovať jednotlivé verzie. Ďalej bude pridaný link na prekliknutie k oficiálnej dokumentácii projektu."
+            }
+        ],
+        "obrazky": ["img1.png", "img2.png"],
+        "new": true,
+        "improvement": false,
+        "bugfix": false
+    }
+]

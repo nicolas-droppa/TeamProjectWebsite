@@ -1,4 +1,4 @@
-const csvUrl = './currentState.csv';
+const jsonUrl = './data/currentState.json';
 let updatesData = [];
 let activeTags = new Set();
 
@@ -9,25 +9,24 @@ function renderUpdates(data) {
     versionList.innerHTML = '';
 
     data.forEach((row, index) => {
-        const titles = row.Nazvy ? String(row.Nazvy).split('|') : [];
-        const texts = row.Texty ? String(row.Texty).split('|') : [];
-        const images = row.Obrazky ? String(row.Obrazky).split('|') : [];
+        const sections = Array.isArray(row.sections) ? row.sections : [];
+        const images = Array.isArray(row.obrazky) ? row.obrazky : [];
 
         const tagDefs = [
-            { key: "New", label: "New" },
-            { key: "Improvement", label: "Improvement" },
-            { key: "Bugfix", label: "Bugfix" }
+            { key: "new", label: "New" },
+            { key: "improvement", label: "Improvement" },
+            { key: "bugfix", label: "Bugfix" }
         ];
 
         const tagsHtml = tagDefs
             .filter(tag => String(row[tag.key]).toLowerCase() === "true")
-            .map(tag => `<span class="tag ${tag.key.toLowerCase()}">${tag.label}</span>`)
+            .map(tag => `<span class=\"tag ${tag.key}\">${tag.label}</span>`)
             .join('');
 
-        let sectionsHtml = titles.map((title, i) => `
+        let sectionsHtml = sections.map(section => `
             <div class="section">
-                <h4>${title || ''}</h4>
-                <p>${texts[i] || ''}</p>
+                <h4>${section.nadpis || ''}</h4>
+                <p>${section.text || ''}</p>
             </div>
         `).join('');
 
@@ -36,11 +35,11 @@ function renderUpdates(data) {
         `).join('');
 
         const titleHtml = `
-            <div class="version">${row.Verzia || ''}</div>
+            <div class="version">${row.verzia || ''}</div>
             <div class="text">
-                ${row.HlavnaTema || ''} <div class="label">${index === 0 ? '[ latest ]' : ''}</div>
+                ${row.hlavnatema || ''} <div class="label">${index === 0 ? '[ latest ]' : ''}</div>
             </div>
-            <div class="date">${row.Datum || ''}</div>
+            <div class="date">${row.datum || ''}</div>
         `;
 
         const updateSection = document.createElement('div');
@@ -59,7 +58,7 @@ function renderUpdates(data) {
         container.appendChild(updateSection);
 
         const li = document.createElement('li');
-        li.textContent = row.Verzia || `Update ${index + 1}`;
+        li.textContent = row.verzia || `Update ${index + 1}`;
         li.classList.add('version-link');
         li.addEventListener('click', () => {
             document.getElementById(`update-${index}`).scrollIntoView({ behavior: 'smooth' });
@@ -72,15 +71,16 @@ function applyFilters() {
     const searchValue = document.querySelector('#searchInput').value.toLowerCase();
 
     let filtered = updatesData.filter(row => {
+        const sectionText = (Array.isArray(row.sections) ? row.sections.map(s => `${s.nadpis} ${s.text}`) : []).join(' ');
         const combinedText = [
-            row.HlavnaTema, row.Verzia, row.Datum,
-            row.Nazvy, row.Texty
+            row.hlavnatema, row.verzia, row.datum,
+            sectionText
         ].join(' ').toLowerCase();
 
         const matchesText = combinedText.includes(searchValue);
 
         const matchesTags = activeTags.size === 0 || [...activeTags].every(tag =>
-            String(row[tag]).toLowerCase() === "true"
+            String(row[tag.toLowerCase()]).toLowerCase() === "true"
         );
 
         return matchesText && matchesTags;
@@ -109,14 +109,13 @@ document.addEventListener('input', e => {
     }
 });
 
-fetch(csvUrl)
-    .then(response => response.text())
-    .then(csvText => {
-        let data = Papa.parse(csvText, { header: true }).data;
+fetch(jsonUrl)
+    .then(response => response.json())
+    .then(data => {
+        // If needed, filter out empty rows (shouldn't be necessary with JSON)
         data = data.filter(row => row && Object.values(row).some(val => val !== undefined && val !== null && val !== ''));
-
         data.reverse();
         updatesData = data;
         renderUpdates(updatesData);
     })
-    .catch(err => console.error('Error loading CSV:', err));
+    .catch(err => console.error('Error loading JSON:', err));
