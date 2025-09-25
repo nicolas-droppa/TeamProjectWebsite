@@ -24,6 +24,7 @@ fetch(csvUrl)
                 }
             }).join('');
 
+            const meetingTypeHtml = row['In-Person'].toLowerCase() === 'true' ? 'In-Person' : 'Online';
 
             const card = document.createElement('div');
             card.classList.add('meeting-card');
@@ -40,6 +41,7 @@ fetch(csvUrl)
                             <div class="date">${row.Datum}</div>
                         </div>
                         <div class="attendance">${circles}</div>
+                        <div class="meeting-type">${meetingTypeHtml}</div>
                     </div>
                 </div>
             `;

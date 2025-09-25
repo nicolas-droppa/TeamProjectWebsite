@@ -39,7 +39,7 @@
 
     --color-text: #fafafa;
     --color-text-complement: #9a9a9a;
-    --color-text-unimportant: #494949;
+    --color-text-unimportant: #606060;
 
     --color-primary: #292938;
     --color-secondary: #20202c;
@@ -144,6 +144,12 @@ body {
     flex-direction: row;
     padding: .5rem;
     margin-left: -.5rem;
+}
+
+.meeting-card .meeting-type {
+    position: relative;
+    font-size: .7rem;
+    color: var(--color-text-unimportant);
 }
 
 .meeting-card .time-date {
