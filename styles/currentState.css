@@ -101,11 +101,14 @@ body {
     margin-bottom: 0.5rem;
     padding: 0.4rem 0.6rem;
     border-radius: 0.25rem;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, border 0.1s ease;
 }
 
 .sidebar li:hover {
-    background-color: var(--color-ascent);
+    color: var(--color-ascent);
+    border-left: .2rem solid var(--color-ascent);
+    background-color: var(--color-background-complement);
+    border-radius: 0;
 }
 
 .updates {
