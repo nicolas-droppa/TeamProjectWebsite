@@ -24,6 +24,7 @@
 
     --color-red: #ff4a4a;
     --color-green: #68ff5d;
+    --color-green-dark: #49e23e;
     --color-blue: #54a1ff;
     --color-orange: #ff9853;
     --color-yellow: #ffe561;
@@ -65,6 +66,7 @@ body {
 }
 
 .container {
+    margin-top: 2rem;
     display: flex;
 }
 
@@ -109,8 +111,13 @@ body {
 }
 
 .update-body {
+    position: relative;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(135deg, var(--color-background-complement), var(--color-primary));
+    border-radius: 0.1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .title {
@@ -118,9 +125,8 @@ body {
     display: flex;
     align-items: center;
     font-family: 'Novelin-Bold', sans-serif;
-    background-color: var(--color-text-complement);
     padding: 1rem;
-    color: var(--color-white);
+    background-color: var(--color-primary);
 }
 
 .title .text .label {
@@ -132,7 +138,7 @@ body {
 .title .version {
     font-size: 1rem;
     padding-right: 1.5rem;
-    border-right: .15rem solid var(--color-white);
+    border-right: .15rem solid var(--color-text);
 }
 
 .title .text {
@@ -147,9 +153,38 @@ body {
     right: 2rem;
 }
 
+.tags {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    padding: 1rem 1rem .5rem 1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: .2rem;
+    font-size: 0.8rem;
+}
+
+.tag.new {
+    border: .0625rem solid var(--color-green-dark);
+    color: var(--color-green-dark);
+}
+
+.tag.improvement {
+    border: .0625rem solid var(--color-blue);
+    color: var(--color-blue);
+}
+
+.tag.bugfix {
+    border: .0625rem solid var(--color-red);
+    color: var(--color-red);
+}
+
 .content-sections {
-    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 1rem;
 }

@@ -15,6 +15,17 @@ fetch(csvUrl)
             const texts = row.Texty ? String(row.Texty).split('|') : [];
             const images = row.Obrazky ? String(row.Obrazky).split('|') : [];
 
+            const tagDefs = [
+                { key: "New", label: "New" },
+                { key: "Improvement", label: "Improvement" },
+                { key: "Bugfix", label: "Bugfix" }
+            ];
+
+            const tagsHtml = tagDefs
+                .filter(tag => String(row[tag.key]).toLowerCase() === "true")
+                .map(tag => `<span class="tag ${tag.key.toLowerCase()}">${tag.label}</span>`)
+                .join('');
+
             let sectionsHtml = titles.map((title, i) => `
                 <div class="section">
                     <h4>${title || ''}</h4>
@@ -40,9 +51,8 @@ fetch(csvUrl)
 
             updateSection.innerHTML = `
                 <div class="update-body">
-                    <div class="title">
-                        ${titleHtml}
-                    </div>
+                    <div class="title">${titleHtml}</div>
+                    <div class="tags">${tagsHtml}</div>
                     <div class="content-sections">${sectionsHtml}</div>
                     <div class="images">${imagesHtml}</div>
                 </div>

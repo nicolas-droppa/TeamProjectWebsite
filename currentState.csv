@@ -1,7 +1,4 @@
-HlavnaTema,Datum,Verzia,Nazvy,Texty,Obrazky
-"Rozdelenie úloh","2025-09-21","v1.0.0.","Úvod|Záver","Diskusia o rozdelení modulov|Všetko odsúhlasené","img1.png|img2.png"
-"Kontrola pokroku","2025-09-28","v1.0.1.","Správa|Feedback","Skontrolovali sme progress|Dostali sme pripomienky","progress.png"
-"Plán ďalších krokov","2025-10-05","v1.1.0.","Plán|Deadline|Úlohy","Naplánovali sme ďalší sprint|Stanovili sme deadline|Rozdelili sme úlohy","plan.png|tasks.png|deadline.png"
-"Plán ďalších krokov","2025-10-05","v1.1.1.","Plán|Deadline|Úlohy","Naplánovali sme ďalší sprint|Stanovili sme deadline|Rozdelili sme úlohy","plan.png|tasks.png|deadline.png"
-"Plán ďalších krokov","2025-10-05","v1.1.5.","Plán|Deadline|Úlohy","Naplánovali sme ďalší sprint|Stanovili sme deadline|Rozdelili sme úlohy","plan.png|tasks.png|deadline.png"
-"Plán ďalších krokov","2025-10-05","v1.1.8.","Plán|Deadline|Úlohy","Naplánovali sme ďalší sprint|Stanovili sme deadline|Rozdelili sme úlohy","plan.png|tasks.png|deadline.png"
+HlavnaTema,Datum,Verzia,Nazvy,Texty,Obrazky,New,Improvement,Bugfix
+"Rozdelenie úloh","2025-09-21","v1.0.0.","Úvod|Záver","Diskusia o rozdelení modulov|Všetko odsúhlasené","img1.png|img2.png",True,False,True
+"Kontrola pokroku","2025-09-28","v1.0.1.","Správa|Feedback","Skontrolovali sme progress|Dostali sme pripomienky","progress.png",False,True,False
+"Plán ďalších krokov","2025-10-05","v1.1.0.","Plán|Deadline|Úlohy","Naplánovali sme ďalší sprint|Stanovili sme deadline|Rozdelili sme úlohy","plan.png|tasks.png|deadline.png",True,True,False
