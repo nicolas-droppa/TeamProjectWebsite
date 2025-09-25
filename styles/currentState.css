@@ -34,12 +34,12 @@
 .dark-mode {
     --color-white: #f3f3f3;
 
-    --color-background: #1b1a1c;
-    --color-background-complement: #1e1d1f;
+    --color-background: #242430;
+    --color-background-complement: #1c1c26;
 
     --color-text: #fafafa;
     --color-text-complement: #9a9a9a;
-    --color-text-unimportant: #494949;
+    --color-text-unimportant: #b1b1b1;
 
     --color-primary: #292938;
     --color-secondary: #20202c;
@@ -227,6 +227,8 @@ body {
     border: none;
     border-radius: 0.15rem;
     width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-text);
 }
 
 .filter-tags {
