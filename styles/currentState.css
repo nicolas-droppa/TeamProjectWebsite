@@ -70,6 +70,12 @@ body {
     display: flex;
 }
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .sidebar {
     width: 10rem;
     background-color: var(--color-background);
@@ -108,6 +114,8 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     padding: 2rem;
+    padding-left: 1rem;
+    min-height: 90vh;
 }
 
 .update-body {
@@ -151,6 +159,7 @@ body {
     position: absolute;
     font-size: .75rem;
     right: 2rem;
+    color: var(--color-text-unimportant);
 }
 
 .tags {
@@ -187,4 +196,136 @@ body {
     flex-direction: column;
     gap: 1.5rem;
     padding: 1rem;
+}
+
+.search-bar {
+    display: flex;
+    width: 100%;
+}
+
+.search-bar .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    padding-right: .5rem;
+}
+
+.filter-panel {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 2rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+#searchInput {
+    padding: 0.5rem;
+    font-size: .8rem;
+    font-family: 'Novelin-Reg', sans-serif;
+    border: none;
+    border-radius: 0.15rem;
+    width: 100%;
+}
+
+.filter-tags {
+    display: flex;
+    gap: .5rem;
+}
+
+.filter-btn {
+    padding: .3rem .8rem;
+    border: none;
+    border-radius: .15rem;
+    cursor: pointer;
+    background: var(--color-primary);
+    color: var(--color-text);
+    transition: background 0.2s;
+}
+
+.filter-btn:hover {
+    background: var(--color-secondary);
+}
+
+.filter-btn.active {
+    background-color: transparent;
+    outline: .0625rem solid var(--color-ascent);
+    color: var(--color-ascent);
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .filter-panel {
+        padding-top: 0;
+        padding-right: 1rem;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+    }
+
+    .updates {
+        padding: 1rem;
+    }
+
+    .title .date {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .title .text {
+        margin-left: 0;
+        margin-top: 0.3rem;
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .title .text .label {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .title .date {
+        position: relative;
+        margin-left: 2rem;
+    }
+
+    .filter-panel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card-image {
+        max-width: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title .text {
+        font-size: 0.9rem;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.4rem;
+    }
+
+    .card-image {
+        max-width: 60px;
+    }
 }

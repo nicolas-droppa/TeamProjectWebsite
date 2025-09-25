@@ -43,8 +43,21 @@
             <h3>Versions</h3>
             <ul id="versionList"></ul>
         </aside>
+        <div class="main-content">
+            <div class="filter-panel">
+                <div class="search-bar">
+                    <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <input type="text" id="searchInput" placeholder="Search by text, version, date...">
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-btn" data-tag="new">New</button>
+                    <button class="filter-btn" data-tag="improvement">Improvement</button>
+                    <button class="filter-btn" data-tag="bugfix">Bugfix</button>
+                </div>
+            </div>
 
-        <main id="updates" class="updates"></main>
+            <main id="updates" class="updates"></main>
+        </div>
     </div>
 
     <script src="scripts/loaders/navbarLoader.js"></script>
