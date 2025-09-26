@@ -1,7 +1,8 @@
 window.addEventListener('load', () => {
     const heroContent = document.querySelector('.hero-content');
-    heroContent.style.transform = 'translateX(0)';
-    heroContent.style.opacity = '1';
+    if (heroContent) {
+        setTimeout(() => heroContent.classList.add('slide-in'), 150);
+    }
 
     if(localStorage.getItem('dark-mode') === 'enabled'){
         document.body.classList.add('dark-mode');
