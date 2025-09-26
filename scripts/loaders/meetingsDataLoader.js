@@ -49,6 +49,11 @@ fetch(jsonUrl)
             });
 
             container.appendChild(card);
+
+            // Staggered animation
+            setTimeout(() => {
+                card.classList.add('slide-in');
+            }, 120 + index * 80);
         });
     })
     .catch(err => console.error('Error loading JSON:', err));
