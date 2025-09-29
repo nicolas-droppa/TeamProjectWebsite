@@ -13,5 +13,20 @@
         "miroslavas": false,
         "prejednavaneveci": "Oboznámenie sa s témov a jej očakávaniami",
         "zaver": "Stretli sme s s vedúcim a následne sme začali zoznamovanie. Každý člen tímu vrátane vedúceho porozprával v krátkosti o sebe a o tom čomu by sa chcel venovať. Následne nám bolo vysvetlené čomu náš projekt prispeje a prečo vlastne tento projekt bol vypísaný pre riešenie. Po pochopení sme sa presunuli k téme projektu a jeho dvom hlavným častiam. Prvou hlavnou časťou je vytvoriť objednávkový systém kde budú dve strany, teda buď poskytovateľ alebo klient. Poskytovateľ bude mať možnosť sa prihlásiť ako firma a následne vyplniť údaje o tom aké, kedy a ako poskytuje služby. Naproti tomu klient bude mať možnosť sa registrovať a následne objednať na tieto poskytované služby. Druhou hlavnou časťou, ktorá bola rozoberaná na stretnutí je prirodzený jazyk. Dospelo sa k záveru, že prirodzený jazyk bude budúcou formou komunikácie so strojmi, teda práve vďaka tomuto sa v druhej časti projektu budeme venovať prepojeniu našeho systému s umelou inteligenciou pre porozumenie prirodzenému jazyku. Teda používateľ zadá 'Objednaj ma k zubárovi 14:30 na štvrtok' a systém klienta rezervuje. Posledným bodom programu bola dohodnutá budúca komunikácia s vedúcim a tam sme sa dohodli na discorde a každotýždennom stretnutí."
+    },
+    {
+        "hlavnatema": "Upresnenie požiadaviek",
+        "datum": "29.09.2025",
+        "cas": "17:00-18:35",
+        "inperson": true,
+        "kratkypopis": "Na stretnutí sme si upresnili požiadavky klienta (vedúceho) pre projekt, následne sme prejednávali potrebné role a ich use-cases",
+        "veduci": true,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Oboznámenie sa s témov a jej očakávaniami",
+        "zaver": "Stretli sme sa online cez aplikáciu discord kde sme zahájili stretnutie dotazmi na klienta, teda nášho vedúceho projektu aby sme vedeli čo musí vyvíjaná aplikácia obsahovať. Zároveň sme kategorizovali požiadavky na aplikáciu ako must-have a nice-to-have. Na stretnutí sme rozoberali potrebné role pre aplikáciu, use-case-y pre každú rolu a celé také gro aplikácie a jej hlavné body. Dospeli sme k záveru že role budú zarial klasifikované ako poskytovateľ, klient, administrátor a entita. Prejednávali sme či musí byť prihlásený v systéme aj poskytovateľ služby, teda napríklad kaderník Tomáš bude strihať a bude musieť mať aj vytvorené konto v aplikácii. Stanovisko bolo zaujaté práve tak, aby mal aj účet, značne to sprehľadní celý systém a zjednoduší budúce notifikácie. Načrtli sme aj gro práce a to teda samotné objednávanie a formy ktoré sú očakávané, teda že klient môže vyhľadávať podĽa kategórie služieb, ktoré sú ponúkané ale aj podľa ľudí, ktorý službu poskytujú. Tak isto budeme implementovať aj hodnotenie, filtráciu cien a toho, ako ďaleko sa služba nachádza. Viac o stretnutí doplníme neskôr..."
     }
 ]
