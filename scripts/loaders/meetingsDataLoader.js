@@ -1,60 +1,65 @@
 const jsonUrl = './data/meetings.json';
 
+
 fetch(jsonUrl)
     .then(response => response.json())
     .then(data => {
         const container = document.querySelector('#meetings');
-        data.forEach((row, index) => {
-            const attendance = [
-                { key: 'veduci', class: 'blue-circle', name: '[Veduci] Marek Drnzik' },
-                { key: 'jakubd', class: 'red-circle', name: 'Jakub Daniš' },
-                { key: 'samueld', class: 'green-circle', name: 'Samuel Dutka' },
-                { key: 'nicolasd', class: 'orange-circle', name: 'Nicolas Droppa' },
-                { key: 'vratkob', class: 'yellow-circle', name: 'Vratko Bakša' },
-                { key: 'miroslavas', class: 'pink-circle', name: 'Miroslava Štefinová' }
-            ];
-
-            const circles = attendance.map(person => {
-                if (row[person.key] === true) {
-                    return `<div class="${person.class}" title="${person.name}"></div>`;
-                } else {
-                    return `<div class="${person.class} absent" title="${person.name}"></div>`;
-                }
-            }).join('');
-
-            const meetingTypeHtml = row['inperson'] === true ? 'In-Person' : 'Online';
-
-            const card = document.createElement('div');
-            card.classList.add('meeting-card');
-            card.innerHTML = `
-                <div class="meetingcard-body">
-                    <div class="title">
-                        <div class="number">${index + 1}</div>
-                        <div class="text">${row.hlavnatema}</div>
-                    </div>
-                    <div class="description">${row.kratkypopis}</div>
-                    <div class="footer">
-                        <div class="time-date">
-                            <div class="time">${row.cas}</div>
-                            <div class="date">${row.datum}</div>
-                        </div>
-                        <div class="attendance">${circles}</div>
-                        <div class="meeting-type">${meetingTypeHtml}</div>
-                    </div>
-                </div>
-            `;
-
-            card.addEventListener('click', () => {
-                showMeetingModal(row, index + 1);
-            });
-
-            container.appendChild(card);
-
-            // Staggered animation
+        setTimeout(() => {
+            container.classList.add('slide-in');
             setTimeout(() => {
-                card.classList.add('slide-in');
-            }, 120 + index * 80);
-        });
+                data.forEach((row, index) => {
+                const attendance = [
+                    { key: 'veduci', class: 'blue-circle', name: '[Veduci] Marek Drnzik' },
+                    { key: 'jakubd', class: 'red-circle', name: 'Jakub Daniš' },
+                    { key: 'samueld', class: 'green-circle', name: 'Samuel Dutka' },
+                    { key: 'nicolasd', class: 'orange-circle', name: 'Nicolas Droppa' },
+                    { key: 'vratkob', class: 'yellow-circle', name: 'Vratko Bakša' },
+                    { key: 'miroslavas', class: 'pink-circle', name: 'Miroslava Štefinová' }
+                ];
+
+                const circles = attendance.map(person => {
+                    if (row[person.key] === true) {
+                        return `<div class="${person.class}" title="${person.name}"></div>`;
+                    } else {
+                        return `<div class="${person.class} absent" title="${person.name}"></div>`;
+                    }
+                }).join('');
+
+                const meetingTypeHtml = row['inperson'] === true ? 'In-Person' : 'Online';
+
+                const card = document.createElement('div');
+                card.classList.add('meeting-card');
+                card.innerHTML = `
+                    <div class="meetingcard-body">
+                        <div class="title">
+                            <div class="number">${index + 1}</div>
+                            <div class="text">${row.hlavnatema}</div>
+                        </div>
+                        <div class="description">${row.kratkypopis}</div>
+                        <div class="footer">
+                            <div class="time-date">
+                                <div class="time">${row.cas}</div>
+                                <div class="date">${row.datum}</div>
+                            </div>
+                            <div class="attendance">${circles}</div>
+                            <div class="meeting-type">${meetingTypeHtml}</div>
+                        </div>
+                    </div>
+                `;
+
+                card.addEventListener('click', () => {
+                    showMeetingModal(row, index + 1);
+                });
+
+                container.appendChild(card);
+
+                setTimeout(() => {
+                    card.classList.add('slide-in');
+                }, 120 + index * 80);
+            });
+            }, 250);
+        })
     })
     .catch(err => console.error('Error loading JSON:', err));
 

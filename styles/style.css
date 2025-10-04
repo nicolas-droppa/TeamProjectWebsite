@@ -73,9 +73,6 @@ body {
     background: transparent;
     z-index: 1000;
     border-bottom: none;
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 .navbar .nav-links {
