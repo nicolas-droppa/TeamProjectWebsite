@@ -49,7 +49,7 @@
         "datum": "6.10.2025",
         "cas": "17:00-18:30",
         "inperson": false,
-        "kratkypopis": "Veduci skontroloval zapracovanie Functional Requirements z minula, zaroven sme implementovali tabulku pre FR",
+        "kratkypopis": "Veduci skontroloval zapracovanie Functional Requirements z minula + implementácia tabulky pre FR",
         "veduci": true,
         "jakubd": true,
         "samueld": true,
@@ -60,11 +60,11 @@
         "zaver": "Bola urobena tabulka z FR a nasledne sme ich ocislovali a dorozdelovali na must have a nice to have. Dalwj boli dopracovane tie kde vzbiky z minula otazky."
     },
     {
-        "hlavnatema": "Doplnenie FR a vzniknutych otazok",
+        "hlavnatema": "Doplnenie FR",
         "datum": "6.10.2025",
         "cas": "18:30-19:10",
         "inperson": false,
-        "kratkypopis": "Clenovia timu hned po predoslom stretnuti s veducim spracovali vsetky dalsie vzniknute FR a ulohy spojene s tabulkou",
+        "kratkypopis": "Clenovia timu hned po predoslom stretnuti s veducim spracovali dalsie FR...",
         "veduci": false,
         "jakubd": true,
         "samueld": true,
