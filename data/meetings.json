@@ -43,5 +43,35 @@
         "miroslavas": true,
         "prejednavaneveci": "Rozdelenie požiadaviek a use-casov",
         "zaver": "V jira sme si vytvorili page a v nej sme uviedli všetky požiadavky ktoré boli prekonzultované na predošlom stretnutí, následne boli požiadavky prerozdelené na funkcionálne, nefunkcionálne a doménové. Potom sme taktiež rozdelili jednotlivé use-casy na must-have a nice-to-have v našom dokumente. Vzniklo pár otázok, ktoré budú odkonzultované s vedúcim na najbližšom stretnutí."
+    },
+    {
+        "hlavnatema": "Kontrola a doplnenie FR",
+        "datum": "6.10.2025",
+        "cas": "17:00-18:30",
+        "inperson": false,
+        "kratkypopis": "Veduci skontroloval zapracovanie Functional Requirements z minula + implementácia tabulky pre FR",
+        "veduci": true,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Zapracovanie FR do tabulky",
+        "zaver": "Bola urobena tabulka z FR a nasledne sme ich ocislovali a dorozdelovali na must have a nice to have. Dalwj boli dopracovane tie kde vzbiky z minula otazky."
+    },
+    {
+        "hlavnatema": "Doplnenie FR",
+        "datum": "6.10.2025",
+        "cas": "18:30-19:10",
+        "inperson": false,
+        "kratkypopis": "Clenovia timu hned po predoslom stretnuti s veducim spracovali dalsie FR...",
+        "veduci": false,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Zapracovanie FR do tabulky",
+        "zaver": "Po predoslom stretnuti s veducim, boli vypracovane vsetky odhalene nedostatky a nove FR."
     }
 ]
