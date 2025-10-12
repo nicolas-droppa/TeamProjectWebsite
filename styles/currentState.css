@@ -283,6 +283,7 @@ body {
 
 @media screen and (max-width: 1024px) {
     .container {
+        margin-top: 5rem;
         flex-direction: column;
     }
 

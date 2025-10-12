@@ -70,7 +70,7 @@ body {
     width: 100%;
     padding: 2rem 2rem;
     margin: 0 auto;
-    background: transparent;
+    background: var(--color-background);
     z-index: 1000;
     border-bottom: none;
 }
