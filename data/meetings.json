@@ -73,5 +73,20 @@
         "miroslavas": true,
         "prejednavaneveci": "Zapracovanie FR do tabulky",
         "zaver": "Po predoslom stretnuti s veducim, boli vypracovane vsetky odhalene nedostatky a nove FR."
+    },
+    {
+        "hlavnatema": "Zadanie na týždeň",
+        "datum": "13.10.2025",
+        "cas": "17:00-17:20",
+        "inperson": false,
+        "kratkypopis": "Vedúci zadal úlohu - vypracovať use-case diagram",
+        "veduci": false,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Úlohy na ďalší týždeň",
+        "zaver": "Vedúci zadal úlohu - vypracovať use-case diagram, v nasledovnom týždni sa tím bude usilovne venovať vytvoreniu use case diagramu - prípadene aj use-case tabuľky (scenárov)"
     }
 ]
