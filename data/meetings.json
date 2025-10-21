@@ -88,5 +88,35 @@
         "miroslavas": true,
         "prejednavaneveci": "Úlohy na ďalší týždeň",
         "zaver": "Vedúci zadal úlohu - vypracovať use-case diagram, v nasledovnom týždni sa tím bude usilovne venovať vytvoreniu use case diagramu - prípadene aj use-case tabuľky (scenárov)"
+    },
+    {
+        "hlavnatema": "Kontrola Use-case diagramu",
+        "datum": "21.10.2025",
+        "cas": "18:30-18:55",
+        "inperson": false,
+        "kratkypopis": "Počas minulého týždňa sme vypracovali Use-case diagram a na stretnutí s vedúcim sme ho prešli a skontrolovali.",
+        "veduci": true,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": false,
+        "prejednavaneveci": "Vysvetlenie chýb a kontrola Use-case diagramu",
+        "zaver": "Spomenieme iba chyby a veci, ktoré boli spomenuté a navrhnuté na prerobenie alebo drobnú úpravu... Pri účtoch rozlišujeme zmenu hesla a zabudnutie hesla v diagrame, provider musí menežovať rezervácie, granularizovať popis 'Rôzne spôsoby rezervácie' v UC diagrame, chýba zmazanie služby --iba v prípade, že neexistuje žiadna rezervácia na danú službu (historic data), pridali sme teda celé nové rozhranie 'Spravovanie služby'"
+    },
+    {
+        "hlavnatema": "Zapracovanie zmien zo stretnutia",
+        "datum": "21.10.2025",
+        "cas": "18:55-",
+        "inperson": false,
+        "kratkypopis": "V stretnutí sme pokračovali rovno po kontrole UC diagramu a zapracovali sme všetky zmeny ktoré vedúci navrhol.",
+        "veduci": false,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": false,
+        "prejednavaneveci": "Zapracovanie zmien do UC diagramu",
+        "zaver": "Aktuálne by sme mali mať priravený UC diagram podľa požiadaviek vedúceho. V prípade, že by sme mali ešte nejaké otázky, môžeme ich prebrať na ďalšom stretnutí."
     }
 ]
