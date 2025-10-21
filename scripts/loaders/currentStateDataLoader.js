@@ -31,7 +31,7 @@ function renderUpdates(data) {
         `).join('');
 
         let imagesHtml = images.map(src => `
-            <img src="${src.trim() || ''}" alt="Image" class="card-image"/>
+            <div class="image-wrap"><img src="${src.trim() || ''}" alt="Image" class="card-image"/></div>
         `).join('');
 
         const titleHtml = `
@@ -56,6 +56,14 @@ function renderUpdates(data) {
         `;
 
         container.appendChild(updateSection);
+
+        const imgs = updateSection.querySelectorAll('.card-image');
+        imgs.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', (e) => {
+                showImageModal(e.currentTarget.src);
+            });
+        });
 
         const li = document.createElement('li');
         li.textContent = row.verzia || `Update ${index + 1}`;
@@ -119,3 +127,32 @@ fetch(jsonUrl)
         renderUpdates(updatesData);
     })
     .catch(err => console.error('Error loading JSON:', err));
+
+// Image modal functions
+function showImageModal(src) {
+    let modal = document.getElementById('imageModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'imageModal';
+        modal.className = 'image-modal';
+        modal.innerHTML = `
+            <div class="image-container">
+                <button class="close-btn" id="closeImageModal">✕</button>
+                <img src="" alt="Large image" id="modalImage" />
+            </div>
+        `;
+        document.body.appendChild(modal);
+        document.getElementById('closeImageModal').addEventListener('click', closeImageModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeImageModal();
+        });
+    }
+    const modalImg = document.getElementById('modalImage');
+    modalImg.src = src;
+    modal.classList.add('open');
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) modal.classList.remove('open');
+}

@@ -13,5 +13,20 @@
         "new": true,
         "improvement": false,
         "bugfix": false
+    },
+    {
+        "hlavnatema": "Vytvorenie Use-Case diagramu",
+        "datum": "21.10.2025",
+        "verzia": "v1.0.1.",
+        "sections": [
+            {
+                "nadpis": "Bol vytvorený Use-Case diagram pre náš projekt",
+                "text": "Po konzultácii s vedúcim sme vytvorili Use-Case diagram, ktorý zobrazuje jednotlivých aktérov a ich interakcie s naším systémom. Diagram bol vytvorený na základe predtým definovaných funkčných požiadaviek a pomôže nám lepšie pochopiť, ako bude náš systém fungovať z pohľadu používateľov."
+            }
+        ],
+        "obrazky": ["assets/images/UC.jpg"],
+        "new": true,
+        "improvement": false,
+        "bugfix": false
     }
 ]
