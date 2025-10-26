@@ -118,5 +118,20 @@
         "miroslavas": false,
         "prejednavaneveci": "Zapracovanie zmien do UC diagramu",
         "zaver": "Aktuálne by sme mali mať priravený UC diagram podľa požiadaviek vedúceho. V prípade, že by sme mali ešte nejaké otázky, môžeme ich prebrať na ďalšom stretnutí."
+    },
+    {
+        "hlavnatema": "Tvorba Class Diagramu",
+        "datum": "26.10.2025",
+        "cas": "19:00-21:00",
+        "inperson": false,
+        "kratkypopis": "V stretnutí sme začali tvoriť Class Diagram na základe UC diagramu a požiadaviek.",
+        "veduci": false,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Tvorba Class Diagramu",
+        "zaver": "Na stretnutí sme začali tvoriť Class Diagram na základe UC diagramu a požiadaviek. Pokračovať budeme na ďalšom stretnutí."
     }
 ]
