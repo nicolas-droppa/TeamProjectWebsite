@@ -105,7 +105,7 @@
         "zaver": "Spomenieme iba chyby a veci, ktoré boli spomenuté a navrhnuté na prerobenie alebo drobnú úpravu... Pri účtoch rozlišujeme zmenu hesla a zabudnutie hesla v diagrame, provider musí menežovať rezervácie, granularizovať popis 'Rôzne spôsoby rezervácie' v UC diagrame, chýba zmazanie služby --iba v prípade, že neexistuje žiadna rezervácia na danú službu (historic data), pridali sme teda celé nové rozhranie 'Spravovanie služby'"
     },
     {
-        "hlavnatema": "Zapracovanie zmien zo stretnutia",
+        "hlavnatema": "Zapracovanie zmien",
         "datum": "21.10.2025",
         "cas": "18:55-19:44",
         "inperson": false,
@@ -120,18 +120,18 @@
         "zaver": "Aktuálne by sme mali mať priravený UC diagram podľa požiadaviek vedúceho. V prípade, že by sme mali ešte nejaké otázky, môžeme ich prebrať na ďalšom stretnutí."
     },
     {
-        "hlavnatema": "Tvorba Class Diagramu",
-        "datum": "26.10.2025",
-        "cas": "19:00-21:00",
+        "hlavnatema": "Kontrola Class Diagramu",
+        "datum": "30.10.2025",
+        "cas": "17:00-18:15",
         "inperson": false,
-        "kratkypopis": "V stretnutí sme začali tvoriť Class Diagram na základe UC diagramu a požiadaviek.",
-        "veduci": false,
+        "kratkypopis": "Stretnutie s vedúcim za účelom kontroly a pripomienok k vytvorenému Class Diagramu.",
+        "veduci": true,
         "jakubd": true,
         "samueld": true,
         "nicolasd": true,
         "vratkob": true,
         "miroslavas": true,
-        "prejednavaneveci": "Tvorba Class Diagramu",
-        "zaver": "Na stretnutí sme začali tvoriť Class Diagram na základe UC diagramu a požiadaviek. Pokračovať budeme na ďalšom stretnutí."
+        "prejednavaneveci": "Prezentácia a kontrola Class Diagramu s vedúcim, diskusia o potrebných úpravách a doplneniach.",
+        "zaver": "Získali sme pripomienky k Class Diagramu, ktoré zapracujeme pred ďalším stretnutím."
     }
 ]
