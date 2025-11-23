@@ -43,5 +43,20 @@
         "new": true,
         "improvement": false,
         "bugfix": false
+    },
+    {
+        "hlavnatema": "Vytvorenie ER diagramu",
+        "datum": "23.11.2025",
+        "verzia": "v1.0.3.",
+        "sections": [
+            {
+                "nadpis": "Bol vytvorený ER pre náš projekt",
+                "text": "Na základe konzultácií s vedúcim sme vytvorili ER diagram."
+            }
+        ],
+        "obrazky": ["assets/images/ER.png"],
+        "new": true,
+        "improvement": false,
+        "bugfix": false
     }
 ]
