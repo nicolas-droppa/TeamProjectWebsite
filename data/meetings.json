@@ -133,5 +133,20 @@
         "miroslavas": true,
         "prejednavaneveci": "Prezentácia a kontrola Class Diagramu s vedúcim, diskusia o potrebných úpravách a doplneniach.",
         "zaver": "Získali sme pripomienky k Class Diagramu, ktoré zapracujeme pred ďalším stretnutím."
+    },
+    {
+        "hlavnatema": "Kontrola ER Diagramu",
+        "datum": "10.10.2025",
+        "cas": "17:00-17:30",
+        "inperson": false,
+        "kratkypopis": "Stretnutie s vedúcim za účelom kontroly a pripomienok k vytvorenému ER Diagramu.",
+        "veduci": true,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Prezentácia a kontrola ER Diagramu s vedúcim, diskusia o potrebných úpravách a doplneniach.",
+        "zaver": "Získali sme pripomienky k ER Diagramu, ktoré zapracujeme pred ďalším stretnutím. Zároveň vedúci podotkol, že v class diagrame sa nachádza pár drobností, ktoré je ešte potrebné opraviť."
     }
 ]
