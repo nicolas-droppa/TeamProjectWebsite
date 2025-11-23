@@ -28,5 +28,20 @@
         "new": true,
         "improvement": false,
         "bugfix": false
+    },
+    {
+        "hlavnatema": "Vytvorenie Class-Diagramu diagramu",
+        "datum": "23.11.2025",
+        "verzia": "v1.0.2.",
+        "sections": [
+            {
+                "nadpis": "Bol vytvorený Class-Diagram pre náš projekt",
+                "text": "Na základe požiadaviek a konzultácií s vedúcim sme vytvorili Class-Diagram, ktorý zobrazuje štruktúru nášho systému vrátane tried, ich atribútov, metód a vzťahov medzi nimi. Tento diagram nám pomôže lepšie pochopiť, ako budeme implementovať jednotlivé časti systému a ako budú spolu komunikovať."
+            }
+        ],
+        "obrazky": ["assets/images/CD.png"],
+        "new": true,
+        "improvement": false,
+        "bugfix": false
     }
 ]

@@ -148,5 +148,20 @@
         "miroslavas": true,
         "prejednavaneveci": "Prezentácia a kontrola ER Diagramu s vedúcim, diskusia o potrebných úpravách a doplneniach.",
         "zaver": "Získali sme pripomienky k ER Diagramu, ktoré zapracujeme pred ďalším stretnutím. Zároveň vedúci podotkol, že v class diagrame sa nachádza pár drobností, ktoré je ešte potrebné opraviť."
+    },
+    {
+        "hlavnatema": "Úprava ER a UC Diagramov",
+        "datum": "23.11.2025",
+        "cas": "17:30-21:05",
+        "inperson": false,
+        "kratkypopis": "Úprava diagramov a zapracovanie požiadaviek vedúceho.",
+        "veduci": false,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Úprava ER a UC Diagramov podľa požiadaviek vedúceho.",
+        "zaver": "Diagramy boli upravené a pripravené na ďalšiu kontrolu."
     }
 ]
