@@ -163,5 +163,20 @@
         "miroslavas": true,
         "prejednavaneveci": "Úprava ER a UC Diagramov podľa požiadaviek vedúceho.",
         "zaver": "Diagramy boli upravené a pripravené na ďalšiu kontrolu."
+    },
+    {
+        "hlavnatema": "Rekapitulácia úprav diagramov a dotazy",
+        "datum": "24.11.2025",
+        "cas": "18:30-19:30",
+        "inperson": false,
+        "kratkypopis": "Ryćhle prebehnutie diagramov a následne dotazy na vedúceho.",
+        "veduci": true,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Rekapitulácia úprav diagramov a zodpovedanie otázok vedúcim.",
+        "zaver": "Prejednali sa diagramy a náledne sme riešili či vytovirť json alebo tabľku pre assety v našom porjkete. Ustanovli sme že vytvoríme json súbor. Zároveň sme prišli k záveru, že môžeme začať programovať."
     }
 ]
