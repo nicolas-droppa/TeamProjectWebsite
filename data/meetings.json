@@ -178,5 +178,20 @@
         "miroslavas": true,
         "prejednavaneveci": "Rekapitulácia úprav diagramov a zodpovedanie otázok vedúcim.",
         "zaver": "Prejednali sa diagramy a náledne sme riešili či vytovirť json alebo tabľku pre assety v našom porjkete. Ustanovli sme že vytvoríme json súbor v ktorom budeme vytvárať exceptiony a sety. Zároveň sme prišli k záveru, že môžeme začať programovať."
+    },
+    {
+        "hlavnatema": "Kontrola progresu",
+        "datum": "01.12.2025",
+        "cas": "17:25-17:40",
+        "inperson": false,
+        "kratkypopis": "Rýchle stretnutie na kontrolu progresu tímu.",
+        "veduci": true,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Ukážka dokumentacie a nasledná kontrola vecí v dokumentácii.",
+        "zaver": "Dokumentácia bola predvedená a skontrolovaná vedúcim. Všetky potrebné veci boli prebrané. Následujúci týždeň sa budeme venovať zlepšeniu dokumentácie a začneme sa venovať implementácii."
     }
 ]
