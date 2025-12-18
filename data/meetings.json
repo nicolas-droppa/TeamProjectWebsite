@@ -193,5 +193,20 @@
         "miroslavas": true,
         "prejednavaneveci": "Ukážka dokumentacie a nasledná kontrola vecí v dokumentácii.",
         "zaver": "Dokumentácia bola predvedená a skontrolovaná vedúcim. Všetky potrebné veci boli prebrané. Následujúci týždeň sa budeme venovať zlepšeniu dokumentácie a začneme sa venovať implementácii."
+    },
+    {
+        "hlavnatema": "Kontrola progresu",
+        "datum": "11.12.2025",
+        "cas": "18:00-18:40",
+        "inperson": false,
+        "kratkypopis": "Kontrola dokumentácie",
+        "veduci": true,
+        "jakubd": true,
+        "samueld": true,
+        "nicolasd": true,
+        "vratkob": true,
+        "miroslavas": true,
+        "prejednavaneveci": "Kontrola dokumentácie pred blížiacim sa odovzdávaním.",
+        "zaver": "S vedúcim sme na stertnutí prešli dokumentáciu. Následne boli vytvorené pripomienky a boli sme oboznámení s tým, čo je potrebné zmeniť a dotiahnúť do konca."
     }
 ]
