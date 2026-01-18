@@ -58,5 +58,20 @@
         "new": true,
         "improvement": false,
         "bugfix": false
+    },
+    {
+        "hlavnatema": "Frontendová implementácia pre úvodnú stránku",
+        "datum": "18.1.2026",
+        "verzia": "v1.1.0.",
+        "sections": [
+            {
+                "nadpis": "Implementácia úvodnej stránky",
+                "text": "Implementácia úvodnej stránky - frontend. Zároveň bola vytvorená kostra pre ďalšie podstránky a začalo sa implementovať frontend pre stránku 'moje rezerácie'."
+            }
+        ],
+        "obrazky": ["assets/images/doplnim.png"],
+        "new": true,
+        "improvement": false,
+        "bugfix": false
     }
 ]

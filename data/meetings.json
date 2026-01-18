@@ -34,15 +34,15 @@
         "datum": "02.10.2025",
         "cas": "18:00-20:45",
         "inperson": false,
-        "kratkypopis": "Spísali sme si všetky požiadavky a rozdelili sme ich",
+        "kratkypopis": "Detailné spísanie všetkých požiadaviek a ich kategorizácia v Jire",
         "veduci": false,
         "jakubd": true,
         "samueld": true,
         "nicolasd": true,
         "vratkob": true,
         "miroslavas": true,
-        "prejednavaneveci": "Rozdelenie požiadaviek a use-casov",
-        "zaver": "V jira sme si vytvorili page a v nej sme uviedli všetky požiadavky ktoré boli prekonzultované na predošlom stretnutí, následne boli požiadavky prerozdelené na funkcionálne, nefunkcionálne a doménové. Potom sme taktiež rozdelili jednotlivé use-casy na must-have a nice-to-have v našom dokumente. Vzniklo pár otázok, ktoré budú odkonzultované s vedúcim na najbližšom stretnutí."
+        "prejednavaneveci": "Kategorizácia požiadaviek na funkcionálne, nefunkcionálne a doménové + rozdelenie use-casov na must-have a nice-to-have",
+        "zaver": "Vytvorili sme v Jire štruktúrovanú stránku so všetkými požiadavkami prekonzultovanými na predchádzajúcom stretnutí. Rozdelili sme ich na tri kategórie: funkcionálne, nefunkcionálne a doménové. Následne sme use-case-y rozdelili na must-have a nice-to-have. Vzniklo niekoľko otvorených otázok, ktoré budeme konzultovať s vedúcim na najbližšom stretnutí."
     },
     {
         "hlavnatema": "Kontrola a doplnenie FR",
@@ -124,15 +124,15 @@
         "datum": "30.10.2025",
         "cas": "17:00-18:15",
         "inperson": false,
-        "kratkypopis": "Stretnutie s vedúcim za účelom kontroly a pripomienok k vytvorenému Class Diagramu.",
+        "kratkypopis": "Prezentácia a kontrola Class diagramu s vedúcim, diskusia o potrebných úpravách",
         "veduci": true,
         "jakubd": true,
         "samueld": true,
         "nicolasd": true,
         "vratkob": true,
         "miroslavas": true,
-        "prejednavaneveci": "Prezentácia a kontrola Class Diagramu s vedúcim, diskusia o potrebných úpravách a doplneniach.",
-        "zaver": "Získali sme pripomienky k Class Diagramu, ktoré zapracujeme pred ďalším stretnutím."
+        "prejednavaneveci": "Prehľad štruktúry tried, vzťahov, atribútov a metód; identifikácia chýbajúcich alebo nadbytočných prvkov; návrhy na úpravy a doplnenia",
+        "zaver": "Na stretnutí sme detailne prešli celý Class diagram. Vedúci poskytol viaceré konštruktívne pripomienky týkajúce sa vzťahov medzi triedami, chýbajúcich atribútov (najmä v súvislosti s rezerváciami a službami), duplicitných prvkov a možných vylepšení pre budúcu rozšíriteľnosť. Získali sme zoznam úprav, ktoré tím zapracuje pred ďalším kontrolným stretnutím."
     },
     {
         "hlavnatema": "Kontrola ER Diagramu",
@@ -169,44 +169,44 @@
         "datum": "24.11.2025",
         "cas": "18:30-19:30",
         "inperson": false,
-        "kratkypopis": "Ryćhle prebehnutie diagramov a následne dotazy na vedúceho.",
+        "kratkypopis": "Rýchla rekapitulácia upravených diagramov + konzultácia ďalších technických rozhodnutí",
         "veduci": true,
         "jakubd": true,
         "samueld": true,
         "nicolasd": true,
         "vratkob": true,
         "miroslavas": true,
-        "prejednavaneveci": "Rekapitulácia úprav diagramov a zodpovedanie otázok vedúcim.",
-        "zaver": "Prejednali sa diagramy a náledne sme riešili či vytovirť json alebo tabľku pre assety v našom porjkete. Ustanovli sme že vytvoríme json súbor v ktorom budeme vytvárať exceptiony a sety. Zároveň sme prišli k záveru, že môžeme začať programovať."
+        "prejednavaneveci": "Prehľad finálnych úprav UC a ER diagramov; diskusia o formáte dát pre assety/exceptions (JSON vs tabuľka); rozhodnutie o začatí implementácie",
+        "zaver": "Najprv sme rýchlo prebehli upravené verzie diagramov – vedúci s nimi súhlasil. Následne sme riešili praktickú otázku: či pre assety, exceptiony a sety použiť JSON súbor alebo tabuľku. Dohodli sme sa na JSON formáte – bude prehľadnejší a jednoduchší na údržbu. Zároveň sme sa zhodli, že teoretická časť je v takom stave, že môžeme plynule prejsť do implementačnej fázy projektu."
     },
     {
         "hlavnatema": "Kontrola progresu",
         "datum": "01.12.2025",
         "cas": "17:25-17:40",
         "inperson": false,
-        "kratkypopis": "Rýchle stretnutie na kontrolu progresu tímu.",
+        "kratkypopis": "Krátke kontrolné stretnutie – ukážka aktuálnej dokumentácie a kontrola postupu",
         "veduci": true,
         "jakubd": true,
         "samueld": true,
         "nicolasd": true,
         "vratkob": true,
         "miroslavas": true,
-        "prejednavaneveci": "Ukážka dokumentacie a nasledná kontrola vecí v dokumentácii.",
-        "zaver": "Dokumentácia bola predvedená a skontrolovaná vedúcim. Všetky potrebné veci boli prebrané. Následujúci týždeň sa budeme venovať zlepšeniu dokumentácie a začneme sa venovať implementácii."
+        "prejednavaneveci": "Prezentácia aktuálnej verzie dokumentácie; spätná väzba vedúceho; plán na najbližší týždeň (zlepšenie dokumentácie + začiatok implementácie)",
+        "zaver": "Stretnutie bolo krátke, ale efektívne. Ukázali sme vedúcemu aktuálnu verziu dokumentácie (požiadavky, use-casy, diagramy). Prešli sme si ju a dostali sme potvrdenie, že je v dobrom stave. Dohodli sme sa, že budúci týždeň sa ešte zameriame na doladenie a zlepšenie dokumentácie (hlavne formálne stránky, konzistencia) a zároveň spustíme prvé kroky implementácie backendu/frontendu."
     },
     {
         "hlavnatema": "Kontrola progresu",
         "datum": "11.12.2025",
         "cas": "18:00-18:40",
         "inperson": false,
-        "kratkypopis": "Kontrola dokumentácie",
+        "kratkypopis": "Kontrola dokumentácie tesne pred termínom odovzdania",
         "veduci": true,
         "jakubd": true,
         "samueld": true,
         "nicolasd": true,
         "vratkob": true,
         "miroslavas": true,
-        "prejednavaneveci": "Kontrola dokumentácie pred blížiacim sa odovzdávaním.",
-        "zaver": "S vedúcim sme na stertnutí prešli dokumentáciu. Následne boli vytvorené pripomienky a boli sme oboznámení s tým, čo je potrebné zmeniť a dotiahnúť do konca."
+        "prejednavaneveci": "Detailný prehľad celej dokumentácie; identifikácia posledných nedostatkov a priorít na dokončenie pred odovzdaním",
+        "zaver": "Na tomto stretnutí sme s vedúcim prešli kompletnú dokumentáciu v stave, v akom je tesne pred odovzdaním. Dostali sme konkrétny zoznam pripomienok – niektoré menšie formálne úpravy, doplnenie popisov, oprava drobných nekonzistencií a doladenie záverečných častí. Vedúci nám jasne povedal, čo je ešte nutné dotiahnuť do konca, aby sme odovzdali kvalitnú verziu. Tím sa dohodol na rozdelení posledných úloh a intenzívnom finiši."
     }
 ]
