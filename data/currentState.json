@@ -9,7 +9,7 @@
                 "text": "Bola vytvorená webstránka pre prezentáciu násho tímového projektu. Na webstránke možno vidieť navigačné menu kde sa dá preklikávať medzi prehľadom stretnutí a aktuálneho stavu projektu. V aktuálnom stave je možné filtrovať jednotlivé verzie. Ďalej bude pridaný link na prekliknutie k oficiálnej dokumentácii projektu."
             }
         ],
-        "obrazky": ["img1.png", "img2.png"],
+        "obrazky": [],
         "new": true,
         "improvement": false,
         "bugfix": false
@@ -36,7 +36,7 @@
         "sections": [
             {
                 "nadpis": "Bol vytvorený Class-Diagram pre náš projekt",
-                "text": "Na základe požiadaviek a konzultácií s vedúcim sme vytvorili Class-Diagram, ktorý zobrazuje štruktúru nášho systému vrátane tried, ich atribútov, metód a vzťahov medzi nimi. Tento diagram nám pomôže lepšie pochopiť, ako budeme implementovať jednotlivé časti systému a ako budú spolu komunikovať."
+                "text": "Na základe požiadaviek and konzultácií s vedúcim sme vytvorili Class-Diagram, ktorý zobrazuje štruktúru nášho systému vrátane tried, ich atribútov, metód a vzťahov medzi nimi. Tento diagram nám pomôže lepšie pochopiť, ako budeme implementovať jednotlivé časti systému a ako budú spolu komunikovať."
             }
         ],
         "obrazky": ["assets/images/CD.png"],
@@ -69,7 +69,217 @@
                 "text": "Implementácia úvodnej stránky - frontend. Zároveň bola vytvorená kostra pre ďalšie podstránky a začalo sa implementovať frontend pre stránku 'moje rezerácie'."
             }
         ],
-        "obrazky": ["assets/images/doplnim.png"],
+        "obrazky": ["assets/images/welcome-page.png"],
+        "new": true,
+        "improvement": false,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Frontendová implementácia pre my profile",
+        "datum": "25.02.2026",
+        "verzia": "v1.1.1.",
+        "sections": [
+            {
+                "nadpis": "Schválenie Landing Page a rozvoj profilu",
+                "text": "Landing Page bola úspešne odprezentovaná a schválená vedúcim s pripomienkami k responzivite. Bol predložený drôtený model pre sekciu 'My Appointments'. Na backendovej strane boli vytvorené kontroléry a dátové modely pre riadenie entít a integroval sa stavový manažment pre Light/Dark mód naprieč celou aplikáciou."
+            }
+        ],
+        "obrazky": ["assets/images/my-app-dm.png", "assets/images/my-profile.png"],
+        "new": true,
+        "improvement": true,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Rozšírenie klientskeho rozhrania a formulárov",
+        "datum": "05.03.2026",
+        "verzia": "v1.1.2.",
+        "sections": [
+            {
+                "nadpis": "Funkčný návrh profilu a správa rezervácií",
+                "text": "Implementovali sme sekciu 'My Profile' s modulom pre budúce hodnotenia, GDPR odstránením účtu a nastavením notifikácií. Sekcia 'My Appointments' bola dokončená a ponúka prepínanie medzi chronologickým zoznamom (List view) a kalendárovým prehľadom (Timeline view). Vytvorili sa čisté frontend šablóny pre Login a Registráciu."
+            }
+        ],
+        "obrazky": ["assets/images/login.png", "assets/images/register.png"],
+        "new": true,
+        "improvement": true,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Inicializácia jadra backendu a Speech-to-Text",
+        "datum": "09.03.2026",
+        "verzia": "v1.2.0.",
+        "sections": [
+            {
+                "nadpis": "Biznis hierarchia a hlasový prepis",
+                "text": "Zadefinovali sme robustné relácie a biznis logiku pre hierarchické usporiadanie dát: Podnik (Businesses) -> Pobočky (Branches) -> Služby (Services) -> Zdroje (Assets). Paralelne s tým sa začal hĺbkový výskum integrácie Speech-to-Text (STT) rozhrania pre hlasové ovládanie chatbota na základe knižníc zo zimného semestra."
+            }
+        ],
+        "obrazky": [],
+        "new": true,
+        "improvement": false,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Dokončenie biznis logiky a STT stabilizácia",
+        "datum": "12.03.2026",
+        "verzia": "v1.2.1.",
+        "sections": [
+            {
+                "nadpis": "Dokončenie API pre podniky a funkčný hlasový asistent",
+                "text": "Backend úspešne dokončil programovú logiku a optimalizované zobrazenia (Views) aj API endpointy pre správu podnikov. Modul Speech-to-Text bol stabilizovaný, vďaka čomu vie chatbot transformovať hlasové povely na text. Na základe časových kapacít sme pristúpili k refaktorizácii a odstránili sme z rozsahu projektu modul pre recenzie."
+            }
+        ],
+        "obrazky": [],
+        "new": true,
+        "improvement": false,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Prepojenie autentifikácie a integrácia chatbota",
+        "datum": "19.03.2026",
+        "verzia": "v1.3.0.",
+        "sections": [
+            {
+                "nadpis": "Prepojenie Login/Register formulárov a Alfa verzia Bexi",
+                "text": "Úspešne sme prepojili autentifikačnú logiku backendu s frontendovými formulármi vrátane validácie dát a relácií. Na frontende pribudli základné pohľady pre zoznam a detail podnikov. Oživili sme alfa verziu chatbota Bexi cez lokálnu Ollamu, pričom sa odhalila vysoká miera halucinácií, čo si vyžiada zmenu architektúry."
+            }
+        ],
+        "obrazky": ["assets/images/bexi-beta.png"],
+        "new": true,
+        "improvement": false,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Migrácia AI asistenta a delenie frontend úloh",
+        "datum": "21.03.2026",
+        "verzia": "v1.3.1.",
+        "sections": [
+            {
+                "nadpis": "Prelom v inteligencii chatbota a reštrukturalizácia FE",
+                "text": "Z dôvodu nepresností lokálneho modelu sme migrovali chatbota Bexi na platené komerčné API, čo dramaticky zvýšilo jeho kvalitu, determinizmus a udržiavanie kontextu. Frontend tím sa strategicky rozdelil – Miroslava prevzala modul manuálneho objednávania (Manual Booking) a Nicolas začal vyvíjať administratívny panel (Manage Dashboard)."
+            }
+        ],
+        "obrazky": ["assets/images/bexi_paid_api_results.png", "assets/images/dashboard_wireframe_owner.png"],
+        "new": false,
+        "improvement": true,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Generické komponenty a bezpečné mazanie dát",
+        "datum": "26.03.2026",
+        "verzia": "v1.4.0.",
+        "sections": [
+            {
+                "nadpis": "Znovupoužiteľné UI pre služby/assets a implementácia Soft/Hard Deletes",
+                "text": "Na frontende sa vybudovali flexibilné generické rozhrania pre sekcie služieb a assetov. Backendový tím implementoval mechanizmus mäkkého a tvrdého mazania záznamov (Soft/Hard Deletes). Tým sme zaistili ochranu historických rezervačných dát pred ich definitívnym odstránením. API pre profil bolo aktualizované."
+            }
+        ],
+        "obrazky": ["assets/images/businesses.png"],
+        "new": true,
+        "improvement": true,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Finalizácia rezervačného toku a Drag-and-Drop kalendár",
+        "datum": "02.04.2026",
+        "verzia": "v1.5.0.",
+        "sections": [
+            {
+                "nadpis": "Nasadenie Manual Booking a logika otváracích hodín",
+                "text": "Modul manuálneho objednávania bol kompletne dokončený, integrovaný a otestovaný bez kritických chýb. Na backende sa dokončil pokročilý systém prioritizácie prevádzkových hodín (sviatky vs. výnimky). Pre intuitívne nastavenie sa na frontend implementoval interaktívny kalendár pomocou externej Drag-and-Drop knižnice."
+            }
+        ],
+        "obrazky": ["assets/images/manual_booking_final.png", "assets/images/drag_and_drop_calendar.png"],
+        "new": true,
+        "improvement": true,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Asynchrónna správa pobočiek a transformácia UI asistenta",
+        "datum": "09.04.2026",
+        "verzia": "v1.6.0.",
+        "sections": [
+            {
+                "nadpis": "Asynchrónne priraďovanie zamestnancov a prerábka Bexi na Copilota",
+                "text": "Sprevádzkovali sme asynchrónne odpájanie/pripájanie služieb a zamestnancov k pobočkám (Assign/Unassign) bez reloadu stránky. Na BE sa nasadil granularizovaný systém prístupových práv (Permissions). Makety v 'My Appointments' sme nahradili reálnymi dátami. AI asistent bol vizuálne transformovaný do responzívneho bočného panelu (Copilot rozhranie)."
+            }
+        ],
+        "obrazky": ["assets/images/asynchronous_assign_ui.png", "assets/images/bexi_copilot_sidebar.png"],
+        "new": true,
+        "improvement": true,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Oprava časových pásiem v rezerváciách",
+        "datum": "10.04.2026",
+        "verzia": "v1.6.1.",
+        "sections": [
+            {
+                "nadpis": "Korekcia bugu s časovým posunom schôdzok",
+                "text": "Opravili sme kritickú chybu zistenú počas QA testovania v sekcii 'My Appointments'. Časové pečiatky schôdzok boli na frontende posunuté o +2 hodiny kvôli nesprávnej konfigurácii časových pásiem voči UTC. Problém bol úspešne odstránený naprieč celým rezervačným tokom."
+            }
+        ],
+        "obrazky": ["assets/images/timezone_fix_code.png"],
+        "new": false,
+        "improvement": false,
+        "bugfix": true
+    },
+    {
+        "hlavnatema": "Interaktívne prvky a server-side filtre",
+        "datum": "16.04.2026",
+        "verzia": "v1.7.0.",
+        "sections": [
+            {
+                "nadpis": "Hlboká interaktivita chatbota a unifikovaný Toolbar",
+                "text": "Do chatbota sme integrovali navigačné snackbary – ak AI rozpozná zámer používateľa, vygeneruje akčné tlačidlo na okamžitý skok do danej sekcie. Začal sa vývoj unifikovaného Toolbaru pre uvoľnenie miesta na obrazovke. Backend obohatil riadiace API pre všetky hlavné entity o server-side filtrovanie a vyhľadávanie."
+            }
+        ],
+        "obrazky": ["assets/images/bexi_interactive_snackbar.png", "assets/images/server_side_filtering_api.png"],
+        "new": true,
+        "improvement": true,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Asynchrónna komunikácia a moderný Dashboard",
+        "datum": "23.04.2026",
+        "verzia": "v1.8.0.",
+        "sections": [
+            {
+                "nadpis": "Prechod na JSON API, Toast notifikácie a vysúvací navigačný panel",
+                "text": "Väčšina backendových kontrolérov bola refaktorovaná na čisté JSON API odpovede, čo umožnilo na frontende nasadiť reaktívne Toast notifikácie o úspechu/zlyhaní akcií. Pôvodný koncept Dashboardu bol kompletne nahradený modernou, plne responzívnou bočnou navigačnou lištou vo forme vysúvacieho panelu."
+            }
+        ],
+        "obrazky": ["assets/images/toast_notifications_ui.png", "assets/images/responsive_sidebar_dashboard.png"],
+        "new": false,
+        "improvement": true,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Kategorizácia služieb a mobilná optimalizácia AI",
+        "datum": "07.05.2026",
+        "verzia": "v1.9.0.",
+        "sections": [
+            {
+                "nadpis": "Modul správy kategórií a natívna mobilná interaktivita v chate",
+                "text": "Nasadený bol kompletný modul pre kategorizáciu služieb (Index, Show, Create) na BE aj FE. Vratko zrealizoval redizajn chatbota Bexi do minimalistického štýlu a backend ho naučil vykonávať akcie na pozadí (iniciácia rezervácie). Pre mobilné zariadenia pribudli interaktívne klikacie komponenty priamo v tele chatu."
+            }
+        ],
+        "obrazky": ["assets/images/categories_management.png", "assets/images/bexi_mobile_components.png"],
+        "new": true,
+        "improvement": true,
+        "bugfix": false
+    },
+    {
+        "hlavnatema": "Analytický dashboard a uzavretie vývoja",
+        "datum": "21.05.2026",
+        "verzia": "v2.0.0.",
+        "sections": [
+            {
+                "nadpis": "Nasadenie Dashboard Overview a vizualizácia KPI štatistík",
+                "text": "Úspešne sme dokončili a nasadili posledný veľký celok – Dashboard Overview pre majiteľov podnikov. Implementovala sa plná vertikálna integrácia, kde backend agreguje komplexné biznis dáta (vyťaženosť, obraty, výkonnosť assetov) a frontend ich vizualizuje pomocou interaktívnych grafov. Hlavná fáza implementácie bola vyhlásená za ukončenú."
+            }
+        ],
+        "obrazky": ["assets/images/dashboard_overview_charts.png", "assets/images/kpi_metrics_owner.png"],
         "new": true,
         "improvement": false,
         "bugfix": false
