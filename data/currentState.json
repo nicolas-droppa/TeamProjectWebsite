@@ -159,7 +159,7 @@
                 "text": "Z dôvodu nepresností lokálneho modelu sme migrovali chatbota Bexi na platené komerčné API, čo dramaticky zvýšilo jeho kvalitu, determinizmus a udržiavanie kontextu. Frontend tím sa strategicky rozdelil – Miroslava prevzala modul manuálneho objednávania (Manual Booking) a Nicolas začal vyvíjať administratívny panel (Manage Dashboard)."
             }
         ],
-        "obrazky": ["assets/images/bexi_paid_api_results.png", "assets/images/dashboard_wireframe_owner.png"],
+        "obrazky": [],
         "new": false,
         "improvement": true,
         "bugfix": false
@@ -174,13 +174,13 @@
                 "text": "Na frontende sa vybudovali flexibilné generické rozhrania pre sekcie služieb a assetov. Backendový tím implementoval mechanizmus mäkkého a tvrdého mazania záznamov (Soft/Hard Deletes). Tým sme zaistili ochranu historických rezervačných dát pred ich definitívnym odstránením. API pre profil bolo aktualizované."
             }
         ],
-        "obrazky": ["assets/images/businesses.png"],
+        "obrazky": ["assets/images/businesses.png", "assets/images/archive.png"],
         "new": true,
         "improvement": true,
         "bugfix": false
     },
     {
-        "hlavnatema": "Finalizácia rezervačného toku a Drag-and-Drop kalendár",
+        "hlavnatema": "Finalizácia rezervačného toku a Drag-and-Drop rules for assets",
         "datum": "02.04.2026",
         "verzia": "v1.5.0.",
         "sections": [
@@ -189,7 +189,7 @@
                 "text": "Modul manuálneho objednávania bol kompletne dokončený, integrovaný a otestovaný bez kritických chýb. Na backende sa dokončil pokročilý systém prioritizácie prevádzkových hodín (sviatky vs. výnimky). Pre intuitívne nastavenie sa na frontend implementoval interaktívny kalendár pomocou externej Drag-and-Drop knižnice."
             }
         ],
-        "obrazky": ["assets/images/manual_booking_final.png", "assets/images/drag_and_drop_calendar.png"],
+        "obrazky": ["assets/images/opening-hours.png", "assets/images/manual-booking.png"],
         "new": true,
         "improvement": true,
         "bugfix": false
@@ -204,7 +204,7 @@
                 "text": "Sprevádzkovali sme asynchrónne odpájanie/pripájanie služieb a zamestnancov k pobočkám (Assign/Unassign) bez reloadu stránky. Na BE sa nasadil granularizovaný systém prístupových práv (Permissions). Makety v 'My Appointments' sme nahradili reálnymi dátami. AI asistent bol vizuálne transformovaný do responzívneho bočného panelu (Copilot rozhranie)."
             }
         ],
-        "obrazky": ["assets/images/asynchronous_assign_ui.png", "assets/images/bexi_copilot_sidebar.png"],
+        "obrazky": ["assets/images/bexi.png"],
         "new": true,
         "improvement": true,
         "bugfix": false
@@ -219,7 +219,7 @@
                 "text": "Opravili sme kritickú chybu zistenú počas QA testovania v sekcii 'My Appointments'. Časové pečiatky schôdzok boli na frontende posunuté o +2 hodiny kvôli nesprávnej konfigurácii časových pásiem voči UTC. Problém bol úspešne odstránený naprieč celým rezervačným tokom."
             }
         ],
-        "obrazky": ["assets/images/timezone_fix_code.png"],
+        "obrazky": ["assets/images/fix-my-app.png"],
         "new": false,
         "improvement": false,
         "bugfix": true
@@ -231,10 +231,10 @@
         "sections": [
             {
                 "nadpis": "Hlboká interaktivita chatbota a unifikovaný Toolbar",
-                "text": "Do chatbota sme integrovali navigačné snackbary – ak AI rozpozná zámer používateľa, vygeneruje akčné tlačidlo na okamžitý skok do danej sekcie. Začal sa vývoj unifikovaného Toolbaru pre uvoľnenie miesta na obrazovke. Backend obohatil riadiace API pre všetky hlavné entity o server-side filtrovanie a vyhľadávanie."
+                "text": "Do chatbota sme integrovali navigačné snackbary – ak bexi nájde možnosť pre appointment, vygeneruje akčné tlačidlo na okamžitý skok do danej sekcie. Začal sa vývoj unifikovaného Toolbaru pre uvoľnenie miesta na obrazovke. Backend obohatil riadiace API pre všetky hlavné entity o server-side filtrovanie a vyhľadávanie."
             }
         ],
-        "obrazky": ["assets/images/bexi_interactive_snackbar.png", "assets/images/server_side_filtering_api.png"],
+        "obrazky": ["assets/images/toolbar.png", "assets/images/filters.png"],
         "new": true,
         "improvement": true,
         "bugfix": false
@@ -249,7 +249,7 @@
                 "text": "Väčšina backendových kontrolérov bola refaktorovaná na čisté JSON API odpovede, čo umožnilo na frontende nasadiť reaktívne Toast notifikácie o úspechu/zlyhaní akcií. Pôvodný koncept Dashboardu bol kompletne nahradený modernou, plne responzívnou bočnou navigačnou lištou vo forme vysúvacieho panelu."
             }
         ],
-        "obrazky": ["assets/images/toast_notifications_ui.png", "assets/images/responsive_sidebar_dashboard.png"],
+        "obrazky": ["assets/images/toast.png"],
         "new": false,
         "improvement": true,
         "bugfix": false
@@ -264,7 +264,7 @@
                 "text": "Nasadený bol kompletný modul pre kategorizáciu služieb (Index, Show, Create) na BE aj FE. Vratko zrealizoval redizajn chatbota Bexi do minimalistického štýlu a backend ho naučil vykonávať akcie na pozadí (iniciácia rezervácie). Pre mobilné zariadenia pribudli interaktívne klikacie komponenty priamo v tele chatu."
             }
         ],
-        "obrazky": ["assets/images/categories_management.png", "assets/images/bexi_mobile_components.png"],
+        "obrazky": ["assets/images/categories.png"],
         "new": true,
         "improvement": true,
         "bugfix": false
@@ -279,7 +279,7 @@
                 "text": "Úspešne sme dokončili a nasadili posledný veľký celok – Dashboard Overview pre majiteľov podnikov. Implementovala sa plná vertikálna integrácia, kde backend agreguje komplexné biznis dáta (vyťaženosť, obraty, výkonnosť assetov) a frontend ich vizualizuje pomocou interaktívnych grafov. Hlavná fáza implementácie bola vyhlásená za ukončenú."
             }
         ],
-        "obrazky": ["assets/images/dashboard_overview_charts.png", "assets/images/kpi_metrics_owner.png"],
+        "obrazky": ["assets/images/db-1.png", "assets/images/db-2.png"],
         "new": true,
         "improvement": false,
         "bugfix": false
